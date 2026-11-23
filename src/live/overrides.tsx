@@ -26,7 +26,7 @@ function rateRuns(p: Para, r: Rate, light = false): ReactNode {
   )
 }
 
-// Slide 14 legend: 0–20, 20–40, 40–60, 60–80, 80–100%.
+// Slide 16 legend: 0–20, 20–40, 40–60, 60–80, 80–100%.
 const HEAT = ['#EEF3FC', '#C9D7F4', '#94B0E8', '#5C85D6', '#2B59C3']
 function heat(v: number) {
   return HEAT[Math.min(4, Math.floor(v / 20))]
@@ -38,7 +38,7 @@ function partRate(s: Summary, c: Condition, partId: string) {
   return rate(s.byCondition[c], (r) => r.parts[partId] === 1)
 }
 
-/** Table rows on slides 15–17 → the statistic each row shows. */
+/** Table rows on slides 17–19 → the statistic each row shows. */
 const TABLE_ROWS: Record<string, ((s: Summary, c: Condition) => Rate)[]> = {
   'Scholarship Table': [(s, c) => s.questionRates[c][3], (s, c) => partRate(s, c, '7번 (2)')],
   'Age Table': [(s, c) => s.questionRates[c][1], (s, c) => rate(s.byCondition[c], (r) => questionCorrect(r, 8))],
@@ -46,7 +46,7 @@ const TABLE_ROWS: Record<string, ((s: Summary, c: Condition) => Rate)[]> = {
 }
 
 export function resultOverrides(n: number, summary: Summary): SlideOverrides | undefined {
-  if (n === 13) {
+  if (n === 15) {
     return {
       replace: (s) => (s.kind === 'chart' ? <DotPlot s={s} byCondition={summary.byCondition} /> : undefined),
       box: (s) => {
@@ -65,7 +65,7 @@ export function resultOverrides(n: number, summary: Summary): SlideOverrides | u
       },
     }
   }
-  if (n === 14) {
+  if (n === 16) {
     return {
       cell: (t, row, col) => {
         if (t.name !== 'Item Accuracy Table' || row === 0 || col < 2) return undefined
@@ -76,7 +76,7 @@ export function resultOverrides(n: number, summary: Summary): SlideOverrides | u
       },
     }
   }
-  if (n === 15 || n === 16 || n === 17) {
+  if (n === 17 || n === 18 || n === 19) {
     return {
       cell: (t, row, col) => {
         const rows = TABLE_ROWS[t.name]
@@ -86,13 +86,13 @@ export function resultOverrides(n: number, summary: Summary): SlideOverrides | u
       },
     }
   }
-  if (n === 20) {
+  if (n === 22) {
     return { replace: (s) => (s.kind === 'chart' ? <StudyTimeChart s={s} /> : undefined) }
   }
   return undefined
 }
 
-/** Slides 8 and 10: the countdown replaces the PPT's animated digit stacks. */
+/** Slides 10 and 12: the countdown replaces the PPT's animated digit stacks. */
 export function timerOverrides(t: TimerState, now: number): SlideOverrides {
   const left = remainingMs(t, now)
   const done = left === 0

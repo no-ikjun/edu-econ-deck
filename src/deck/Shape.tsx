@@ -52,7 +52,8 @@ export function Paragraph({ p, first, nowrap, children }: { p: Para; first: bool
   }
   return (
     <p style={style}>
-      {p.bullet && (
+      {/* PowerPoint draws no bullet on an empty paragraph. */}
+      {p.bullet && (children || p.runs.some((r) => r.t.trim())) && (
         <span
           style={{
             position: 'absolute',

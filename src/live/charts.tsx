@@ -6,7 +6,7 @@ export const CONDITION_COLOR: Record<Condition, string> = { ai: '#2B59C3', helpe
 const FONT = 28 // 14pt
 
 /**
- * Slide 13 dot plot (chart1). Matches the PPT chart: inner plot area at
+ * Slide 15 dot plot (chart1). Matches the PPT chart: inner plot area at
  * x 16% / y 4% / w 80% / h 82% of the frame, x axis 0–16 step 2, y axis 0.5–3.8
  * with AI at 3, 학습 도우미 at 2, 독학 at 1. Equal scores stack upward.
  */
@@ -73,7 +73,7 @@ export function DotPlot({ s, byCondition }: { s: ChartShape; byCondition: Record
   )
 }
 
-/** Slide 20 right chart (chart2): study time, horizontal bars, axis max 70. */
+/** Slide 22 right chart (chart2): study time, horizontal bars, axis max 70. */
 export function StudyTimeChart({ s }: { s: ChartShape }) {
   const data = [
     { label: 'AI 튜터', value: 49, color: '#2B59C3' },
