@@ -432,9 +432,9 @@
     },
     {
      "name": "Picture 1",
-     "x": -0.0,
+     "x": 0.0,
      "y": 0.0,
-     "w": 1922.26,
+     "w": 1920.0,
      "h": 1080.0,
      "kind": "image",
      "src": "media/image3.png"
@@ -542,7 +542,7 @@
      "x": 0.0,
      "y": 0.0,
      "w": 1920.0,
-     "h": 1078.73,
+     "h": 1080.0,
      "kind": "image",
      "src": "media/image4.png"
     }
@@ -9541,11 +9541,11 @@
      "x": 96.0,
      "y": 244.0,
      "w": 1728.0,
-     "h": 580.0,
+     "h": 628.0,
      "kind": "table",
      "cols": [
-      72.0,
-      552.0,
+      112.0,
+      512.0,
       368.0,
       368.0,
       368.0
@@ -9732,7 +9732,7 @@
        ]
       },
       {
-       "h": 44.0,
+       "h": 36.0,
        "cells": [
         {
          "paras": [
@@ -9932,7 +9932,7 @@
        ]
       },
       {
-       "h": 44.0,
+       "h": 36.0,
        "cells": [
         {
          "paras": [
@@ -10132,7 +10132,7 @@
        ]
       },
       {
-       "h": 44.0,
+       "h": 36.0,
        "cells": [
         {
          "paras": [
@@ -10332,7 +10332,7 @@
        ]
       },
       {
-       "h": 44.0,
+       "h": 36.0,
        "cells": [
         {
          "paras": [
@@ -10532,7 +10532,7 @@
        ]
       },
       {
-       "h": 44.0,
+       "h": 36.0,
        "cells": [
         {
          "paras": [
@@ -10732,7 +10732,7 @@
        ]
       },
       {
-       "h": 44.0,
+       "h": 36.0,
        "cells": [
         {
          "paras": [
@@ -10932,7 +10932,7 @@
        ]
       },
       {
-       "h": 44.0,
+       "h": 36.0,
        "cells": [
         {
          "paras": [
@@ -10953,6 +10953,12 @@
              "size": 28.0,
              "bold": true,
              "color": "#191F28"
+            },
+            {
+             "t": " (1)",
+             "size": 28.0,
+             "bold": false,
+             "color": "#6B7684"
             }
            ]
           }
@@ -10994,8 +11000,8 @@
              "color": "#4E5968"
             },
             {
-             "t": "  2점",
-             "size": 24.0,
+             "t": " · 공제액",
+             "size": 28.0,
              "bold": false,
              "color": "#6B7684"
             }
@@ -11138,7 +11144,213 @@
        ]
       },
       {
-       "h": 44.0,
+       "h": 36.0,
+       "cells": [
+        {
+         "paras": [
+          {
+           "align": "l",
+           "lineSpacing": {
+            "pct": 1.0
+           },
+           "spaceBefore": {
+            "px": 0.0
+           },
+           "spaceAfter": null,
+           "marL": 0.0,
+           "indent": 0.0,
+           "runs": [
+            {
+             "t": "7",
+             "size": 28.0,
+             "bold": true,
+             "color": "#191F28"
+            },
+            {
+             "t": " (2)",
+             "size": 28.0,
+             "bold": false,
+             "color": "#6B7684"
+            }
+           ]
+          }
+         ],
+         "anchor": "ctr",
+         "border_top": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "border_bottom": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "pad": {
+          "l": 0.0,
+          "r": 12.0,
+          "t": 0.0,
+          "b": 0.0
+         }
+        },
+        {
+         "paras": [
+          {
+           "align": "l",
+           "lineSpacing": {
+            "pct": 1.0
+           },
+           "spaceBefore": {
+            "px": 0.0
+           },
+           "spaceAfter": null,
+           "marL": 0.0,
+           "indent": 0.0,
+           "runs": [
+            {
+             "t": "장학금 차감 여부",
+             "size": 28.0,
+             "bold": false,
+             "color": "#6B7684"
+            }
+           ]
+          }
+         ],
+         "anchor": "ctr",
+         "border_top": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "border_bottom": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "pad": {
+          "l": 0.0,
+          "r": 12.0,
+          "t": 0.0,
+          "b": 0.0
+         }
+        },
+        {
+         "paras": [
+          {
+           "align": "r",
+           "lineSpacing": {
+            "pct": 1.0
+           },
+           "spaceBefore": {
+            "px": 0.0
+           },
+           "spaceAfter": null,
+           "marL": 0.0,
+           "indent": 0.0,
+           "runs": [
+            {
+             "t": "—",
+             "size": 28.0,
+             "bold": false,
+             "color": "#191F28"
+            }
+           ]
+          }
+         ],
+         "anchor": "ctr",
+         "border_top": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "border_bottom": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "pad": {
+          "l": 12.0,
+          "r": 12.0,
+          "t": 0.0,
+          "b": 0.0
+         }
+        },
+        {
+         "paras": [
+          {
+           "align": "r",
+           "lineSpacing": {
+            "pct": 1.0
+           },
+           "spaceBefore": {
+            "px": 0.0
+           },
+           "spaceAfter": null,
+           "marL": 0.0,
+           "indent": 0.0,
+           "runs": [
+            {
+             "t": "—",
+             "size": 28.0,
+             "bold": false,
+             "color": "#191F28"
+            }
+           ]
+          }
+         ],
+         "anchor": "ctr",
+         "border_top": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "border_bottom": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "pad": {
+          "l": 12.0,
+          "r": 12.0,
+          "t": 0.0,
+          "b": 0.0
+         }
+        },
+        {
+         "paras": [
+          {
+           "align": "r",
+           "lineSpacing": {
+            "pct": 1.0
+           },
+           "spaceBefore": {
+            "px": 0.0
+           },
+           "spaceAfter": null,
+           "marL": 0.0,
+           "indent": 0.0,
+           "runs": [
+            {
+             "t": "—",
+             "size": 28.0,
+             "bold": false,
+             "color": "#191F28"
+            }
+           ]
+          }
+         ],
+         "anchor": "ctr",
+         "border_top": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "border_bottom": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "pad": {
+          "l": 12.0,
+          "r": 12.0,
+          "t": 0.0,
+          "b": 0.0
+         }
+        }
+       ]
+      },
+      {
+       "h": 36.0,
        "cells": [
         {
          "paras": [
@@ -11159,6 +11371,12 @@
              "size": 28.0,
              "bold": true,
              "color": "#191F28"
+            },
+            {
+             "t": " (1)",
+             "size": 28.0,
+             "bold": false,
+             "color": "#6B7684"
             }
            ]
           }
@@ -11200,8 +11418,8 @@
              "color": "#4E5968"
             },
             {
-             "t": "  2점",
-             "size": 24.0,
+             "t": " · 인정액",
+             "size": 28.0,
              "bold": false,
              "color": "#6B7684"
             }
@@ -11344,7 +11562,213 @@
        ]
       },
       {
-       "h": 44.0,
+       "h": 36.0,
+       "cells": [
+        {
+         "paras": [
+          {
+           "align": "l",
+           "lineSpacing": {
+            "pct": 1.0
+           },
+           "spaceBefore": {
+            "px": 0.0
+           },
+           "spaceAfter": null,
+           "marL": 0.0,
+           "indent": 0.0,
+           "runs": [
+            {
+             "t": "8",
+             "size": 28.0,
+             "bold": true,
+             "color": "#191F28"
+            },
+            {
+             "t": " (2)",
+             "size": 28.0,
+             "bold": false,
+             "color": "#6B7684"
+            }
+           ]
+          }
+         ],
+         "anchor": "ctr",
+         "border_top": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "border_bottom": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "pad": {
+          "l": 0.0,
+          "r": 12.0,
+          "t": 0.0,
+          "b": 0.0
+         }
+        },
+        {
+         "paras": [
+          {
+           "align": "l",
+           "lineSpacing": {
+            "pct": 1.0
+           },
+           "spaceBefore": {
+            "px": 0.0
+           },
+           "spaceAfter": null,
+           "marL": 0.0,
+           "indent": 0.0,
+           "runs": [
+            {
+             "t": "공제액",
+             "size": 28.0,
+             "bold": false,
+             "color": "#6B7684"
+            }
+           ]
+          }
+         ],
+         "anchor": "ctr",
+         "border_top": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "border_bottom": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "pad": {
+          "l": 0.0,
+          "r": 12.0,
+          "t": 0.0,
+          "b": 0.0
+         }
+        },
+        {
+         "paras": [
+          {
+           "align": "r",
+           "lineSpacing": {
+            "pct": 1.0
+           },
+           "spaceBefore": {
+            "px": 0.0
+           },
+           "spaceAfter": null,
+           "marL": 0.0,
+           "indent": 0.0,
+           "runs": [
+            {
+             "t": "—",
+             "size": 28.0,
+             "bold": false,
+             "color": "#191F28"
+            }
+           ]
+          }
+         ],
+         "anchor": "ctr",
+         "border_top": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "border_bottom": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "pad": {
+          "l": 12.0,
+          "r": 12.0,
+          "t": 0.0,
+          "b": 0.0
+         }
+        },
+        {
+         "paras": [
+          {
+           "align": "r",
+           "lineSpacing": {
+            "pct": 1.0
+           },
+           "spaceBefore": {
+            "px": 0.0
+           },
+           "spaceAfter": null,
+           "marL": 0.0,
+           "indent": 0.0,
+           "runs": [
+            {
+             "t": "—",
+             "size": 28.0,
+             "bold": false,
+             "color": "#191F28"
+            }
+           ]
+          }
+         ],
+         "anchor": "ctr",
+         "border_top": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "border_bottom": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "pad": {
+          "l": 12.0,
+          "r": 12.0,
+          "t": 0.0,
+          "b": 0.0
+         }
+        },
+        {
+         "paras": [
+          {
+           "align": "r",
+           "lineSpacing": {
+            "pct": 1.0
+           },
+           "spaceBefore": {
+            "px": 0.0
+           },
+           "spaceAfter": null,
+           "marL": 0.0,
+           "indent": 0.0,
+           "runs": [
+            {
+             "t": "—",
+             "size": 28.0,
+             "bold": false,
+             "color": "#191F28"
+            }
+           ]
+          }
+         ],
+         "anchor": "ctr",
+         "border_top": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "border_bottom": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "pad": {
+          "l": 12.0,
+          "r": 12.0,
+          "t": 0.0,
+          "b": 0.0
+         }
+        }
+       ]
+      },
+      {
+       "h": 36.0,
        "cells": [
         {
          "paras": [
@@ -11544,7 +11968,7 @@
        ]
       },
       {
-       "h": 44.0,
+       "h": 36.0,
        "cells": [
         {
          "paras": [
@@ -11744,7 +12168,7 @@
        ]
       },
       {
-       "h": 44.0,
+       "h": 36.0,
        "cells": [
         {
          "paras": [
@@ -11765,6 +12189,12 @@
              "size": 28.0,
              "bold": true,
              "color": "#191F28"
+            },
+            {
+             "t": " (1)",
+             "size": 28.0,
+             "bold": false,
+             "color": "#6B7684"
             }
            ]
           }
@@ -11806,8 +12236,8 @@
              "color": "#4E5968"
             },
             {
-             "t": "  2점",
-             "size": 24.0,
+             "t": " · 인정액",
+             "size": 28.0,
              "bold": false,
              "color": "#6B7684"
             }
@@ -11950,7 +12380,213 @@
        ]
       },
       {
-       "h": 44.0,
+       "h": 36.0,
+       "cells": [
+        {
+         "paras": [
+          {
+           "align": "l",
+           "lineSpacing": {
+            "pct": 1.0
+           },
+           "spaceBefore": {
+            "px": 0.0
+           },
+           "spaceAfter": null,
+           "marL": 0.0,
+           "indent": 0.0,
+           "runs": [
+            {
+             "t": "11",
+             "size": 28.0,
+             "bold": true,
+             "color": "#191F28"
+            },
+            {
+             "t": " (2)",
+             "size": 28.0,
+             "bold": false,
+             "color": "#6B7684"
+            }
+           ]
+          }
+         ],
+         "anchor": "ctr",
+         "border_top": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "border_bottom": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "pad": {
+          "l": 0.0,
+          "r": 12.0,
+          "t": 0.0,
+          "b": 0.0
+         }
+        },
+        {
+         "paras": [
+          {
+           "align": "l",
+           "lineSpacing": {
+            "pct": 1.0
+           },
+           "spaceBefore": {
+            "px": 0.0
+           },
+           "spaceAfter": null,
+           "marL": 0.0,
+           "indent": 0.0,
+           "runs": [
+            {
+             "t": "공제액",
+             "size": 28.0,
+             "bold": false,
+             "color": "#6B7684"
+            }
+           ]
+          }
+         ],
+         "anchor": "ctr",
+         "border_top": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "border_bottom": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "pad": {
+          "l": 0.0,
+          "r": 12.0,
+          "t": 0.0,
+          "b": 0.0
+         }
+        },
+        {
+         "paras": [
+          {
+           "align": "r",
+           "lineSpacing": {
+            "pct": 1.0
+           },
+           "spaceBefore": {
+            "px": 0.0
+           },
+           "spaceAfter": null,
+           "marL": 0.0,
+           "indent": 0.0,
+           "runs": [
+            {
+             "t": "—",
+             "size": 28.0,
+             "bold": false,
+             "color": "#191F28"
+            }
+           ]
+          }
+         ],
+         "anchor": "ctr",
+         "border_top": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "border_bottom": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "pad": {
+          "l": 12.0,
+          "r": 12.0,
+          "t": 0.0,
+          "b": 0.0
+         }
+        },
+        {
+         "paras": [
+          {
+           "align": "r",
+           "lineSpacing": {
+            "pct": 1.0
+           },
+           "spaceBefore": {
+            "px": 0.0
+           },
+           "spaceAfter": null,
+           "marL": 0.0,
+           "indent": 0.0,
+           "runs": [
+            {
+             "t": "—",
+             "size": 28.0,
+             "bold": false,
+             "color": "#191F28"
+            }
+           ]
+          }
+         ],
+         "anchor": "ctr",
+         "border_top": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "border_bottom": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "pad": {
+          "l": 12.0,
+          "r": 12.0,
+          "t": 0.0,
+          "b": 0.0
+         }
+        },
+        {
+         "paras": [
+          {
+           "align": "r",
+           "lineSpacing": {
+            "pct": 1.0
+           },
+           "spaceBefore": {
+            "px": 0.0
+           },
+           "spaceAfter": null,
+           "marL": 0.0,
+           "indent": 0.0,
+           "runs": [
+            {
+             "t": "—",
+             "size": 28.0,
+             "bold": false,
+             "color": "#191F28"
+            }
+           ]
+          }
+         ],
+         "anchor": "ctr",
+         "border_top": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "border_bottom": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "pad": {
+          "l": 12.0,
+          "r": 12.0,
+          "t": 0.0,
+          "b": 0.0
+         }
+        }
+       ]
+      },
+      {
+       "h": 36.0,
        "cells": [
         {
          "paras": [
@@ -11971,6 +12607,12 @@
              "size": 28.0,
              "bold": true,
              "color": "#191F28"
+            },
+            {
+             "t": " (1)",
+             "size": 28.0,
+             "bold": false,
+             "color": "#6B7684"
             }
            ]
           }
@@ -12012,8 +12654,214 @@
              "color": "#4E5968"
             },
             {
-             "t": "  2점",
-             "size": 24.0,
+             "t": " · 2026년 공제액",
+             "size": 28.0,
+             "bold": false,
+             "color": "#6B7684"
+            }
+           ]
+          }
+         ],
+         "anchor": "ctr",
+         "border_top": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "border_bottom": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "pad": {
+          "l": 0.0,
+          "r": 12.0,
+          "t": 0.0,
+          "b": 0.0
+         }
+        },
+        {
+         "paras": [
+          {
+           "align": "r",
+           "lineSpacing": {
+            "pct": 1.0
+           },
+           "spaceBefore": {
+            "px": 0.0
+           },
+           "spaceAfter": null,
+           "marL": 0.0,
+           "indent": 0.0,
+           "runs": [
+            {
+             "t": "—",
+             "size": 28.0,
+             "bold": false,
+             "color": "#191F28"
+            }
+           ]
+          }
+         ],
+         "anchor": "ctr",
+         "border_top": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "border_bottom": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "pad": {
+          "l": 12.0,
+          "r": 12.0,
+          "t": 0.0,
+          "b": 0.0
+         }
+        },
+        {
+         "paras": [
+          {
+           "align": "r",
+           "lineSpacing": {
+            "pct": 1.0
+           },
+           "spaceBefore": {
+            "px": 0.0
+           },
+           "spaceAfter": null,
+           "marL": 0.0,
+           "indent": 0.0,
+           "runs": [
+            {
+             "t": "—",
+             "size": 28.0,
+             "bold": false,
+             "color": "#191F28"
+            }
+           ]
+          }
+         ],
+         "anchor": "ctr",
+         "border_top": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "border_bottom": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "pad": {
+          "l": 12.0,
+          "r": 12.0,
+          "t": 0.0,
+          "b": 0.0
+         }
+        },
+        {
+         "paras": [
+          {
+           "align": "r",
+           "lineSpacing": {
+            "pct": 1.0
+           },
+           "spaceBefore": {
+            "px": 0.0
+           },
+           "spaceAfter": null,
+           "marL": 0.0,
+           "indent": 0.0,
+           "runs": [
+            {
+             "t": "—",
+             "size": 28.0,
+             "bold": false,
+             "color": "#191F28"
+            }
+           ]
+          }
+         ],
+         "anchor": "ctr",
+         "border_top": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "border_bottom": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "pad": {
+          "l": 12.0,
+          "r": 12.0,
+          "t": 0.0,
+          "b": 0.0
+         }
+        }
+       ]
+      },
+      {
+       "h": 36.0,
+       "cells": [
+        {
+         "paras": [
+          {
+           "align": "l",
+           "lineSpacing": {
+            "pct": 1.0
+           },
+           "spaceBefore": {
+            "px": 0.0
+           },
+           "spaceAfter": null,
+           "marL": 0.0,
+           "indent": 0.0,
+           "runs": [
+            {
+             "t": "12",
+             "size": 28.0,
+             "bold": true,
+             "color": "#191F28"
+            },
+            {
+             "t": " (2)",
+             "size": 28.0,
+             "bold": false,
+             "color": "#6B7684"
+            }
+           ]
+          }
+         ],
+         "anchor": "ctr",
+         "border_top": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "border_bottom": {
+          "w": 1.0,
+          "color": "#E5E8EB"
+         },
+         "pad": {
+          "l": 0.0,
+          "r": 12.0,
+          "t": 0.0,
+          "b": 0.0
+         }
+        },
+        {
+         "paras": [
+          {
+           "align": "l",
+           "lineSpacing": {
+            "pct": 1.0
+           },
+           "spaceBefore": {
+            "px": 0.0
+           },
+           "spaceAfter": null,
+           "marL": 0.0,
+           "indent": 0.0,
+           "runs": [
+            {
+             "t": "2027년 공제액",
+             "size": 28.0,
              "bold": false,
              "color": "#6B7684"
             }
@@ -12160,9 +13008,9 @@
     {
      "name": "Footnote",
      "x": 96.0,
-     "y": 860.0,
+     "y": 892.0,
      "w": 1120.0,
-     "h": 80.0,
+     "h": 40.0,
      "kind": "box",
      "geom": "rect",
      "body": {
@@ -12189,7 +13037,7 @@
        "indent": 0.0,
        "runs": [
         {
-         "t": "각 칸은 정답률% (정답자/응시자). 2점 문항은 두 답을 모두 맞힌 경우 완전 정답으로 집계. 미입력 값은 —",
+         "t": "각 칸은 정답률% (정답자/응시자). 2점 문항은 (1)·(2) 답을 각각 따로 집계. 미입력 값은 —",
          "size": 24.0,
          "bold": false,
          "color": "#6B7684"
@@ -12201,7 +13049,7 @@
     {
      "name": "Legend Label",
      "x": 1280.0,
-     "y": 860.0,
+     "y": 892.0,
      "w": 100.0,
      "h": 32.0,
      "kind": "box",
@@ -12242,17 +13090,21 @@
     {
      "name": "Legend 0",
      "x": 1404.0,
-     "y": 864.0,
+     "y": 896.0,
      "w": 84.0,
-     "h": 32.0,
+     "h": 20.0,
      "kind": "box",
      "geom": "rect",
-     "fill": "#EEF3FC"
+     "fill": "#EEF3FC",
+     "stroke": {
+      "w": 1.0,
+      "color": "#B0B8C1"
+     }
     },
     {
      "name": "Legend 1",
      "x": 1488.0,
-     "y": 864.0,
+     "y": 896.0,
      "w": 84.0,
      "h": 20.0,
      "kind": "box",
@@ -12262,7 +13114,7 @@
     {
      "name": "Legend 2",
      "x": 1572.0,
-     "y": 864.0,
+     "y": 896.0,
      "w": 84.0,
      "h": 20.0,
      "kind": "box",
@@ -12272,7 +13124,7 @@
     {
      "name": "Legend 3",
      "x": 1656.0,
-     "y": 864.0,
+     "y": 896.0,
      "w": 84.0,
      "h": 20.0,
      "kind": "box",
@@ -12282,7 +13134,7 @@
     {
      "name": "Legend 4",
      "x": 1740.0,
-     "y": 864.0,
+     "y": 896.0,
      "w": 84.0,
      "h": 20.0,
      "kind": "box",
@@ -12292,7 +13144,7 @@
     {
      "name": "Legend 0",
      "x": 1404.0,
-     "y": 892.0,
+     "y": 924.0,
      "w": 120.0,
      "h": 32.0,
      "kind": "box",
@@ -12333,7 +13185,7 @@
     {
      "name": "Legend 100",
      "x": 1704.0,
-     "y": 892.0,
+     "y": 924.0,
      "w": 120.0,
      "h": 32.0,
      "kind": "box",
@@ -14515,1256 +15367,6 @@
        "indent": 0.0,
        "runs": [
         {
-         "t": "03  결과 · 문항 분석",
-         "size": 28.0,
-         "bold": true,
-         "color": "#2B59C3"
-        }
-       ]
-      }
-     ],
-     "placeholder": "body"
-    },
-    {
-     "name": "PH 2",
-     "x": 96.0,
-     "y": 116.0,
-     "w": 1728.0,
-     "h": 120.0,
-     "kind": "box",
-     "geom": "rect",
-     "body": {
-      "insets": {
-       "l": 0.0,
-       "t": 0.0,
-       "r": 0.0,
-       "b": 0.0
-      },
-      "anchor": "t",
-      "wrap": "square"
-     },
-     "paras": [
-      {
-       "align": "l",
-       "lineSpacing": {
-        "pct": 1.1
-       },
-       "spaceBefore": {
-        "pct": 0.0
-       },
-       "spaceAfter": null,
-       "marL": 0,
-       "indent": 0,
-       "runs": [
-        {
-         "t": "200만 원을 기억하면 충분할까?",
-         "size": 60.0,
-         "bold": true,
-         "color": "#191F28",
-         "spacing": -0.6
-        }
-       ]
-      }
-     ],
-     "placeholder": "title"
-    },
-    {
-     "name": "Step 1",
-     "x": 96.0,
-     "y": 248.0,
-     "w": 528.0,
-     "h": 336.0,
-     "kind": "box",
-     "geom": "rect",
-     "fill": "#F2F4F6",
-     "body": {
-      "insets": {
-       "l": 40.0,
-       "t": 40.0,
-       "r": 40.0,
-       "b": 40.0
-      },
-      "anchor": "t",
-      "wrap": "square"
-     },
-     "paras": [
-      {
-       "align": "l",
-       "lineSpacing": {
-        "pct": 1.0
-       },
-       "spaceBefore": {
-        "px": 0.0
-       },
-       "spaceAfter": null,
-       "marL": 0.0,
-       "indent": 0.0,
-       "runs": [
-        {
-         "t": "5번",
-         "size": 28.0,
-         "bold": true,
-         "color": "#2B59C3"
-        }
-       ]
-      },
-      {
-       "align": "l",
-       "lineSpacing": {
-        "pct": 1.0
-       },
-       "spaceBefore": {
-        "px": 12.0
-       },
-       "spaceAfter": null,
-       "marL": 0.0,
-       "indent": 0.0,
-       "runs": [
-        {
-         "t": "한도 금액은?",
-         "size": 40.0,
-         "bold": true,
-         "color": "#191F28"
-        }
-       ]
-      },
-      {
-       "align": "l",
-       "lineSpacing": {
-        "pct": 1.0
-       },
-       "spaceBefore": {
-        "px": 44.0
-       },
-       "spaceAfter": null,
-       "marL": 0.0,
-       "indent": 0.0,
-       "runs": [
-        {
-         "t": "인정액 200만 원",
-         "size": 32.0,
-         "bold": true,
-         "color": "#191F28"
-        }
-       ]
-      },
-      {
-       "align": "l",
-       "lineSpacing": {
-        "pct": 1.25
-       },
-       "spaceBefore": {
-        "px": 8.0
-       },
-       "spaceAfter": null,
-       "marL": 0.0,
-       "indent": 0.0,
-       "runs": [
-        {
-         "t": "공제액 최대 20만 원과 구분",
-         "size": 28.0,
-         "bold": false,
-         "color": "#4E5968"
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "name": "Accent Bar",
-     "x": 96.0,
-     "y": 248.0,
-     "w": 528.0,
-     "h": 8.0,
-     "kind": "box",
-     "geom": "rect",
-     "fill": "#2B59C3"
-    },
-    {
-     "name": "Arrow",
-     "x": 636.0,
-     "y": 416.0,
-     "w": 48.0,
-     "h": 0.0,
-     "kind": "line",
-     "geom": "straightConnector1",
-     "stroke": {
-      "w": 2.5,
-      "color": "#6B7684",
-      "tailEnd": "triangle"
-     }
-    },
-    {
-     "name": "Step 2",
-     "x": 696.0,
-     "y": 248.0,
-     "w": 528.0,
-     "h": 336.0,
-     "kind": "box",
-     "geom": "rect",
-     "fill": "#F2F4F6",
-     "body": {
-      "insets": {
-       "l": 40.0,
-       "t": 40.0,
-       "r": 40.0,
-       "b": 40.0
-      },
-      "anchor": "t",
-      "wrap": "square"
-     },
-     "paras": [
-      {
-       "align": "l",
-       "lineSpacing": {
-        "pct": 1.0
-       },
-       "spaceBefore": {
-        "px": 0.0
-       },
-       "spaceAfter": null,
-       "marL": 0.0,
-       "indent": 0.0,
-       "runs": [
-        {
-         "t": "4번",
-         "size": 28.0,
-         "bold": true,
-         "color": "#2B59C3"
-        }
-       ]
-      },
-      {
-       "align": "l",
-       "lineSpacing": {
-        "pct": 1.0
-       },
-       "spaceBefore": {
-        "px": 12.0
-       },
-       "spaceAfter": null,
-       "marL": 0.0,
-       "indent": 0.0,
-       "runs": [
-        {
-         "t": "누구를 기준으로?",
-         "size": 40.0,
-         "bold": true,
-         "color": "#191F28"
-        }
-       ]
-      },
-      {
-       "align": "l",
-       "lineSpacing": {
-        "pct": 1.0
-       },
-       "spaceBefore": {
-        "px": 44.0
-       },
-       "spaceAfter": null,
-       "marL": 0.0,
-       "indent": 0.0,
-       "runs": [
-        {
-         "t": "납부자 한 명에게 합산 한도",
-         "size": 32.0,
-         "bold": true,
-         "color": "#191F28"
-        }
-       ]
-      },
-      {
-       "align": "l",
-       "lineSpacing": {
-        "pct": 1.25
-       },
-       "spaceBefore": {
-        "px": 8.0
-       },
-       "spaceAfter": null,
-       "marL": 0.0,
-       "indent": 0.0,
-       "runs": [
-        {
-         "t": "본인 150 + 동생 150 → 공제액 20만 원",
-         "size": 28.0,
-         "bold": false,
-         "color": "#4E5968"
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "name": "Accent Bar",
-     "x": 696.0,
-     "y": 248.0,
-     "w": 528.0,
-     "h": 8.0,
-     "kind": "box",
-     "geom": "rect",
-     "fill": "#2B59C3"
-    },
-    {
-     "name": "Arrow",
-     "x": 1236.0,
-     "y": 416.0,
-     "w": 48.0,
-     "h": 0.0,
-     "kind": "line",
-     "geom": "straightConnector1",
-     "stroke": {
-      "w": 2.5,
-      "color": "#6B7684",
-      "tailEnd": "triangle"
-     }
-    },
-    {
-     "name": "Step 3",
-     "x": 1296.0,
-     "y": 248.0,
-     "w": 528.0,
-     "h": 336.0,
-     "kind": "box",
-     "geom": "rect",
-     "fill": "#F2F4F6",
-     "body": {
-      "insets": {
-       "l": 40.0,
-       "t": 40.0,
-       "r": 40.0,
-       "b": 40.0
-      },
-      "anchor": "t",
-      "wrap": "square"
-     },
-     "paras": [
-      {
-       "align": "l",
-       "lineSpacing": {
-        "pct": 1.0
-       },
-       "spaceBefore": {
-        "px": 0.0
-       },
-       "spaceAfter": null,
-       "marL": 0.0,
-       "indent": 0.0,
-       "runs": [
-        {
-         "t": "12번",
-         "size": 28.0,
-         "bold": true,
-         "color": "#2B59C3"
-        }
-       ]
-      },
-      {
-       "align": "l",
-       "lineSpacing": {
-        "pct": 1.0
-       },
-       "spaceBefore": {
-        "px": 12.0
-       },
-       "spaceAfter": null,
-       "marL": 0.0,
-       "indent": 0.0,
-       "runs": [
-        {
-         "t": "다음 해로 넘길 수 있나?",
-         "size": 40.0,
-         "bold": true,
-         "color": "#191F28"
-        }
-       ]
-      },
-      {
-       "align": "l",
-       "lineSpacing": {
-        "pct": 1.0
-       },
-       "spaceBefore": {
-        "px": 44.0
-       },
-       "spaceAfter": null,
-       "marL": 0.0,
-       "indent": 0.0,
-       "runs": [
-        {
-         "t": "한도 초과액 이월 불가",
-         "size": 32.0,
-         "bold": true,
-         "color": "#191F28"
-        }
-       ]
-      },
-      {
-       "align": "l",
-       "lineSpacing": {
-        "pct": 1.25
-       },
-       "spaceBefore": {
-        "px": 8.0
-       },
-       "spaceAfter": null,
-       "marL": 0.0,
-       "indent": 0.0,
-       "runs": [
-        {
-         "t": "2026년 20만 원 · 2027년 0원",
-         "size": 28.0,
-         "bold": false,
-         "color": "#4E5968"
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "name": "Accent Bar",
-     "x": 1296.0,
-     "y": 248.0,
-     "w": 528.0,
-     "h": 8.0,
-     "kind": "box",
-     "geom": "rect",
-     "fill": "#2B59C3"
-    },
-    {
-     "name": "Limit Table",
-     "x": 96.0,
-     "y": 632.0,
-     "w": 1728.0,
-     "h": 208.0,
-     "kind": "table",
-     "cols": [
-      624.0,
-      368.0,
-      368.0,
-      368.0
-     ],
-     "rows": [
-      {
-       "h": 52.0,
-       "cells": [
-        {
-         "paras": [
-          {
-           "align": "l",
-           "lineSpacing": {
-            "pct": 1.0
-           },
-           "spaceBefore": {
-            "px": 0.0
-           },
-           "spaceAfter": null,
-           "marL": 0.0,
-           "indent": 0.0,
-           "runs": [
-            {
-             "t": "문항",
-             "size": 28.0,
-             "bold": true,
-             "color": "#4E5968"
-            }
-           ]
-          }
-         ],
-         "anchor": "ctr",
-         "border_bottom": {
-          "w": 2.0,
-          "color": "#D1D6DB"
-         },
-         "pad": {
-          "l": 0.0,
-          "r": 12.0,
-          "t": 0.0,
-          "b": 0.0
-         }
-        },
-        {
-         "paras": [
-          {
-           "align": "r",
-           "lineSpacing": {
-            "pct": 1.0
-           },
-           "spaceBefore": {
-            "px": 0.0
-           },
-           "spaceAfter": null,
-           "marL": 0.0,
-           "indent": 0.0,
-           "runs": [
-            {
-             "t": "AI",
-             "size": 28.0,
-             "bold": true,
-             "color": "#2B59C3"
-            }
-           ]
-          }
-         ],
-         "anchor": "ctr",
-         "border_bottom": {
-          "w": 2.0,
-          "color": "#D1D6DB"
-         },
-         "pad": {
-          "l": 12.0,
-          "r": 12.0,
-          "t": 0.0,
-          "b": 0.0
-         }
-        },
-        {
-         "paras": [
-          {
-           "align": "r",
-           "lineSpacing": {
-            "pct": 1.0
-           },
-           "spaceBefore": {
-            "px": 0.0
-           },
-           "spaceAfter": null,
-           "marL": 0.0,
-           "indent": 0.0,
-           "runs": [
-            {
-             "t": "학습 도우미",
-             "size": 28.0,
-             "bold": true,
-             "color": "#B4621A"
-            }
-           ]
-          }
-         ],
-         "anchor": "ctr",
-         "border_bottom": {
-          "w": 2.0,
-          "color": "#D1D6DB"
-         },
-         "pad": {
-          "l": 12.0,
-          "r": 12.0,
-          "t": 0.0,
-          "b": 0.0
-         }
-        },
-        {
-         "paras": [
-          {
-           "align": "r",
-           "lineSpacing": {
-            "pct": 1.0
-           },
-           "spaceBefore": {
-            "px": 0.0
-           },
-           "spaceAfter": null,
-           "marL": 0.0,
-           "indent": 0.0,
-           "runs": [
-            {
-             "t": "독학",
-             "size": 28.0,
-             "bold": true,
-             "color": "#0F7B6C"
-            }
-           ]
-          }
-         ],
-         "anchor": "ctr",
-         "border_bottom": {
-          "w": 2.0,
-          "color": "#D1D6DB"
-         },
-         "pad": {
-          "l": 12.0,
-          "r": 12.0,
-          "t": 0.0,
-          "b": 0.0
-         }
-        }
-       ]
-      },
-      {
-       "h": 52.0,
-       "cells": [
-        {
-         "paras": [
-          {
-           "align": "l",
-           "lineSpacing": {
-            "pct": 1.0
-           },
-           "spaceBefore": {
-            "px": 0.0
-           },
-           "spaceAfter": null,
-           "marL": 0.0,
-           "indent": 0.0,
-           "runs": [
-            {
-             "t": "5번",
-             "size": 28.0,
-             "bold": true,
-             "color": "#191F28"
-            },
-            {
-             "t": "  정답률",
-             "size": 28.0,
-             "bold": false,
-             "color": "#4E5968"
-            }
-           ]
-          }
-         ],
-         "anchor": "ctr",
-         "border_top": {
-          "w": 2.0,
-          "color": "#D1D6DB"
-         },
-         "border_bottom": {
-          "w": 1.0,
-          "color": "#E5E8EB"
-         },
-         "pad": {
-          "l": 0.0,
-          "r": 12.0,
-          "t": 0.0,
-          "b": 0.0
-         }
-        },
-        {
-         "paras": [
-          {
-           "align": "r",
-           "lineSpacing": {
-            "pct": 1.0
-           },
-           "spaceBefore": {
-            "px": 0.0
-           },
-           "spaceAfter": null,
-           "marL": 0.0,
-           "indent": 0.0,
-           "runs": [
-            {
-             "t": "—",
-             "size": 28.0,
-             "bold": false,
-             "color": "#191F28"
-            }
-           ]
-          }
-         ],
-         "anchor": "ctr",
-         "border_top": {
-          "w": 2.0,
-          "color": "#D1D6DB"
-         },
-         "border_bottom": {
-          "w": 1.0,
-          "color": "#E5E8EB"
-         },
-         "pad": {
-          "l": 12.0,
-          "r": 12.0,
-          "t": 0.0,
-          "b": 0.0
-         }
-        },
-        {
-         "paras": [
-          {
-           "align": "r",
-           "lineSpacing": {
-            "pct": 1.0
-           },
-           "spaceBefore": {
-            "px": 0.0
-           },
-           "spaceAfter": null,
-           "marL": 0.0,
-           "indent": 0.0,
-           "runs": [
-            {
-             "t": "—",
-             "size": 28.0,
-             "bold": false,
-             "color": "#191F28"
-            }
-           ]
-          }
-         ],
-         "anchor": "ctr",
-         "border_top": {
-          "w": 2.0,
-          "color": "#D1D6DB"
-         },
-         "border_bottom": {
-          "w": 1.0,
-          "color": "#E5E8EB"
-         },
-         "pad": {
-          "l": 12.0,
-          "r": 12.0,
-          "t": 0.0,
-          "b": 0.0
-         }
-        },
-        {
-         "paras": [
-          {
-           "align": "r",
-           "lineSpacing": {
-            "pct": 1.0
-           },
-           "spaceBefore": {
-            "px": 0.0
-           },
-           "spaceAfter": null,
-           "marL": 0.0,
-           "indent": 0.0,
-           "runs": [
-            {
-             "t": "—",
-             "size": 28.0,
-             "bold": false,
-             "color": "#191F28"
-            }
-           ]
-          }
-         ],
-         "anchor": "ctr",
-         "border_top": {
-          "w": 2.0,
-          "color": "#D1D6DB"
-         },
-         "border_bottom": {
-          "w": 1.0,
-          "color": "#E5E8EB"
-         },
-         "pad": {
-          "l": 12.0,
-          "r": 12.0,
-          "t": 0.0,
-          "b": 0.0
-         }
-        }
-       ]
-      },
-      {
-       "h": 52.0,
-       "cells": [
-        {
-         "paras": [
-          {
-           "align": "l",
-           "lineSpacing": {
-            "pct": 1.0
-           },
-           "spaceBefore": {
-            "px": 0.0
-           },
-           "spaceAfter": null,
-           "marL": 0.0,
-           "indent": 0.0,
-           "runs": [
-            {
-             "t": "4번",
-             "size": 28.0,
-             "bold": true,
-             "color": "#191F28"
-            },
-            {
-             "t": "  정답률",
-             "size": 28.0,
-             "bold": false,
-             "color": "#4E5968"
-            }
-           ]
-          }
-         ],
-         "anchor": "ctr",
-         "border_top": {
-          "w": 1.0,
-          "color": "#E5E8EB"
-         },
-         "border_bottom": {
-          "w": 1.0,
-          "color": "#E5E8EB"
-         },
-         "pad": {
-          "l": 0.0,
-          "r": 12.0,
-          "t": 0.0,
-          "b": 0.0
-         }
-        },
-        {
-         "paras": [
-          {
-           "align": "r",
-           "lineSpacing": {
-            "pct": 1.0
-           },
-           "spaceBefore": {
-            "px": 0.0
-           },
-           "spaceAfter": null,
-           "marL": 0.0,
-           "indent": 0.0,
-           "runs": [
-            {
-             "t": "—",
-             "size": 28.0,
-             "bold": false,
-             "color": "#191F28"
-            }
-           ]
-          }
-         ],
-         "anchor": "ctr",
-         "border_top": {
-          "w": 1.0,
-          "color": "#E5E8EB"
-         },
-         "border_bottom": {
-          "w": 1.0,
-          "color": "#E5E8EB"
-         },
-         "pad": {
-          "l": 12.0,
-          "r": 12.0,
-          "t": 0.0,
-          "b": 0.0
-         }
-        },
-        {
-         "paras": [
-          {
-           "align": "r",
-           "lineSpacing": {
-            "pct": 1.0
-           },
-           "spaceBefore": {
-            "px": 0.0
-           },
-           "spaceAfter": null,
-           "marL": 0.0,
-           "indent": 0.0,
-           "runs": [
-            {
-             "t": "—",
-             "size": 28.0,
-             "bold": false,
-             "color": "#191F28"
-            }
-           ]
-          }
-         ],
-         "anchor": "ctr",
-         "border_top": {
-          "w": 1.0,
-          "color": "#E5E8EB"
-         },
-         "border_bottom": {
-          "w": 1.0,
-          "color": "#E5E8EB"
-         },
-         "pad": {
-          "l": 12.0,
-          "r": 12.0,
-          "t": 0.0,
-          "b": 0.0
-         }
-        },
-        {
-         "paras": [
-          {
-           "align": "r",
-           "lineSpacing": {
-            "pct": 1.0
-           },
-           "spaceBefore": {
-            "px": 0.0
-           },
-           "spaceAfter": null,
-           "marL": 0.0,
-           "indent": 0.0,
-           "runs": [
-            {
-             "t": "—",
-             "size": 28.0,
-             "bold": false,
-             "color": "#191F28"
-            }
-           ]
-          }
-         ],
-         "anchor": "ctr",
-         "border_top": {
-          "w": 1.0,
-          "color": "#E5E8EB"
-         },
-         "border_bottom": {
-          "w": 1.0,
-          "color": "#E5E8EB"
-         },
-         "pad": {
-          "l": 12.0,
-          "r": 12.0,
-          "t": 0.0,
-          "b": 0.0
-         }
-        }
-       ]
-      },
-      {
-       "h": 52.0,
-       "cells": [
-        {
-         "paras": [
-          {
-           "align": "l",
-           "lineSpacing": {
-            "pct": 1.0
-           },
-           "spaceBefore": {
-            "px": 0.0
-           },
-           "spaceAfter": null,
-           "marL": 0.0,
-           "indent": 0.0,
-           "runs": [
-            {
-             "t": "12번",
-             "size": 28.0,
-             "bold": true,
-             "color": "#191F28"
-            },
-            {
-             "t": "  '2027년 공제액' 정답률",
-             "size": 28.0,
-             "bold": false,
-             "color": "#4E5968"
-            }
-           ]
-          }
-         ],
-         "anchor": "ctr",
-         "border_top": {
-          "w": 1.0,
-          "color": "#E5E8EB"
-         },
-         "border_bottom": {
-          "w": 1.0,
-          "color": "#E5E8EB"
-         },
-         "pad": {
-          "l": 0.0,
-          "r": 12.0,
-          "t": 0.0,
-          "b": 0.0
-         }
-        },
-        {
-         "paras": [
-          {
-           "align": "r",
-           "lineSpacing": {
-            "pct": 1.0
-           },
-           "spaceBefore": {
-            "px": 0.0
-           },
-           "spaceAfter": null,
-           "marL": 0.0,
-           "indent": 0.0,
-           "runs": [
-            {
-             "t": "—",
-             "size": 28.0,
-             "bold": false,
-             "color": "#191F28"
-            }
-           ]
-          }
-         ],
-         "anchor": "ctr",
-         "border_top": {
-          "w": 1.0,
-          "color": "#E5E8EB"
-         },
-         "border_bottom": {
-          "w": 1.0,
-          "color": "#E5E8EB"
-         },
-         "pad": {
-          "l": 12.0,
-          "r": 12.0,
-          "t": 0.0,
-          "b": 0.0
-         }
-        },
-        {
-         "paras": [
-          {
-           "align": "r",
-           "lineSpacing": {
-            "pct": 1.0
-           },
-           "spaceBefore": {
-            "px": 0.0
-           },
-           "spaceAfter": null,
-           "marL": 0.0,
-           "indent": 0.0,
-           "runs": [
-            {
-             "t": "—",
-             "size": 28.0,
-             "bold": false,
-             "color": "#191F28"
-            }
-           ]
-          }
-         ],
-         "anchor": "ctr",
-         "border_top": {
-          "w": 1.0,
-          "color": "#E5E8EB"
-         },
-         "border_bottom": {
-          "w": 1.0,
-          "color": "#E5E8EB"
-         },
-         "pad": {
-          "l": 12.0,
-          "r": 12.0,
-          "t": 0.0,
-          "b": 0.0
-         }
-        },
-        {
-         "paras": [
-          {
-           "align": "r",
-           "lineSpacing": {
-            "pct": 1.0
-           },
-           "spaceBefore": {
-            "px": 0.0
-           },
-           "spaceAfter": null,
-           "marL": 0.0,
-           "indent": 0.0,
-           "runs": [
-            {
-             "t": "—",
-             "size": 28.0,
-             "bold": false,
-             "color": "#191F28"
-            }
-           ]
-          }
-         ],
-         "anchor": "ctr",
-         "border_top": {
-          "w": 1.0,
-          "color": "#E5E8EB"
-         },
-         "border_bottom": {
-          "w": 1.0,
-          "color": "#E5E8EB"
-         },
-         "pad": {
-          "l": 12.0,
-          "r": 12.0,
-          "t": 0.0,
-          "b": 0.0
-         }
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "name": "Footnote",
-     "x": 96.0,
-     "y": 856.0,
-     "w": 1728.0,
-     "h": 72.0,
-     "kind": "box",
-     "geom": "rect",
-     "body": {
-      "insets": {
-       "l": 0.0,
-       "t": 0.0,
-       "r": 0.0,
-       "b": 0.0
-      },
-      "anchor": "t",
-      "wrap": "square"
-     },
-     "paras": [
-      {
-       "align": "l",
-       "lineSpacing": {
-        "pct": 1.0
-       },
-       "spaceBefore": {
-        "px": 0.0
-       },
-       "spaceAfter": null,
-       "marL": 0.0,
-       "indent": 0.0,
-       "runs": [
-        {
-         "t": "각 칸은 정답률% (정답자/응시자). 12번은 2026년·2027년 공제액이 각 1점이며, 이 표는 2027년 답만 집계. 미입력 값은 —",
-         "size": 24.0,
-         "bold": false,
-         "color": "#6B7684"
-        }
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "n": 20,
-   "bg": "#FFFFFF",
-   "shapes": [
-    {
-     "name": "Footer Rule",
-     "x": 96.0,
-     "y": 996.0,
-     "w": 1728.0,
-     "h": 0.0,
-     "kind": "line",
-     "geom": "line",
-     "stroke": {
-      "w": 1.5,
-      "color": "#E5E8EB"
-     }
-    },
-    {
-     "name": "Footer Label",
-     "x": 96.0,
-     "y": 1012.0,
-     "w": 800.0,
-     "h": 36.0,
-     "kind": "box",
-     "geom": "rect",
-     "body": {
-      "insets": {
-       "l": 0.0,
-       "t": 0.0,
-       "r": 0.0,
-       "b": 0.0
-      },
-      "anchor": "ctr",
-      "wrap": "none"
-     },
-     "paras": [
-      {
-       "align": "l",
-       "lineSpacing": {
-        "pct": 1.0
-       },
-       "spaceBefore": null,
-       "spaceAfter": null,
-       "marL": 0.0,
-       "indent": 0,
-       "runs": [
-        {
-         "t": "교육의 경제학 · 6조",
-         "size": 20.0,
-         "bold": false,
-         "color": "#6B7684"
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "name": "Page Number",
-     "x": 1624.0,
-     "y": 1012.0,
-     "w": 200.0,
-     "h": 36.0,
-     "kind": "box",
-     "geom": "rect",
-     "body": {
-      "insets": {
-       "l": 0.0,
-       "t": 0.0,
-       "r": 0.0,
-       "b": 0.0
-      },
-      "anchor": "ctr",
-      "wrap": "none"
-     },
-     "paras": [
-      {
-       "align": "r",
-       "lineSpacing": {
-        "pct": 1.0
-       },
-       "spaceBefore": null,
-       "spaceAfter": null,
-       "marL": 0.0,
-       "indent": 0,
-       "runs": [
-        {
-         "t": "20",
-         "size": 20.0,
-         "bold": false,
-         "color": "#6B7684",
-         "field": "slidenum"
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "name": "PH 5",
-     "x": 96.0,
-     "y": 68.0,
-     "w": 1728.0,
-     "h": 40.0,
-     "kind": "box",
-     "geom": "rect",
-     "body": {
-      "insets": {
-       "l": 0.0,
-       "t": 0.0,
-       "r": 0.0,
-       "b": 0.0
-      },
-      "anchor": "b",
-      "wrap": "square"
-     },
-     "paras": [
-      {
-       "align": "l",
-       "lineSpacing": {
-        "pct": 1.2
-       },
-       "spaceBefore": {
-        "px": 0.0
-       },
-       "spaceAfter": null,
-       "marL": 0.0,
-       "indent": 0.0,
-       "runs": [
-        {
          "t": "03  결과 · 학습 과정",
          "size": 28.0,
          "bold": true,
@@ -16403,7 +16005,7 @@
    ]
   },
   {
-   "n": 21,
+   "n": 20,
    "bg": "#FFFFFF",
    "shapes": [
     {
@@ -16488,7 +16090,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "21",
+         "t": "20",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -16883,7 +16485,7 @@
    ]
   },
   {
-   "n": 22,
+   "n": 21,
    "bg": "#FFFFFF",
    "shapes": [
     {
@@ -16968,7 +16570,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "22",
+         "t": "21",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -17416,7 +17018,7 @@
    ]
   },
   {
-   "n": 23,
+   "n": 22,
    "bg": "#FFFFFF",
    "shapes": [
     {
@@ -17501,7 +17103,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "23",
+         "t": "22",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -18128,7 +17730,7 @@
    ]
   },
   {
-   "n": 24,
+   "n": 23,
    "bg": "#FFFFFF",
    "shapes": [
     {
@@ -18213,7 +17815,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "24",
+         "t": "23",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -18475,7 +18077,7 @@
    ]
   },
   {
-   "n": 25,
+   "n": 24,
    "bg": "#FFFFFF",
    "shapes": [
     {
@@ -18560,7 +18162,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "25",
+         "t": "24",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -18912,7 +18514,7 @@
    ]
   },
   {
-   "n": 26,
+   "n": 25,
    "bg": "#191F28",
    "shapes": [
     {
@@ -18984,7 +18586,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "26",
+         "t": "25",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -19131,7 +18733,7 @@
    ]
   },
   {
-   "n": 27,
+   "n": 26,
    "bg": "#FFFFFF",
    "shapes": [
     {
@@ -19216,7 +18818,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "27",
+         "t": "26",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",

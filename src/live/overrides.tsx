@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { BoxView, RunSpan, type SlideOverrides } from '../deck/Shape'
-import type { Para, Run } from '../deck/types'
+import type { Para, Run, TableShape } from '../deck/types'
+import { PARTS } from '../data/answerKey'
 import { CONDITIONS, questionCorrect, rate, type Condition, type Rate, type Summary } from '../data/grade'
 import { DotPlot, StudyTimeChart } from './charts'
 import { digits, remainingMs, type TimerState } from './timer'
@@ -38,11 +39,22 @@ function partRate(s: Summary, c: Condition, partId: string) {
   return rate(s.byCondition[c], (r) => r.parts[partId] === 1)
 }
 
-/** Table rows on slides 17–19 → the statistic each row shows. */
+/**
+ * Slide 16 row label → answer-key part. "7 (1)" → "7번 (1)", "3" → "3번", so each
+ * sub-question of a 2-point item gets its own row and its own rate.
+ */
+function partForRow(t: TableShape, row: number) {
+  const label = t.rows[row]?.cells[0]?.paras.flatMap((p) => p.runs.map((r) => r.t)).join('').trim() ?? ''
+  const m = label.match(/^(\d+)\s*(\(\d\))?$/)
+  if (!m) return undefined
+  const id = m[2] ? `${m[1]}번 ${m[2]}` : `${m[1]}번`
+  return PARTS.find((p) => p.id === id)
+}
+
+/** Table rows on slides 17–18 → the statistic each row shows. */
 const TABLE_ROWS: Record<string, ((s: Summary, c: Condition) => Rate)[]> = {
   'Scholarship Table': [(s, c) => s.questionRates[c][3], (s, c) => partRate(s, c, '7번 (2)')],
   'Age Table': [(s, c) => s.questionRates[c][1], (s, c) => rate(s.byCondition[c], (r) => questionCorrect(r, 8))],
-  'Limit Table': [(s, c) => s.questionRates[c][5], (s, c) => s.questionRates[c][4], (s, c) => partRate(s, c, '12번 (2)')],
 }
 
 export function resultOverrides(n: number, summary: Summary): SlideOverrides | undefined {
@@ -69,14 +81,16 @@ export function resultOverrides(n: number, summary: Summary): SlideOverrides | u
     return {
       cell: (t, row, col) => {
         if (t.name !== 'Item Accuracy Table' || row === 0 || col < 2) return undefined
-        const r = summary.questionRates[CONDITIONS[col - 2]][row]
+        const part = partForRow(t, row)
+        if (!part) return undefined
+        const r = partRate(summary, CONDITIONS[col - 2], part.id)
         const v = pct(r)
         if (v === null) return undefined
         return { fill: heat(v), para: (p) => rateRuns(p, r, v >= 60) }
       },
     }
   }
-  if (n === 17 || n === 18 || n === 19) {
+  if (n === 17 || n === 18) {
     return {
       cell: (t, row, col) => {
         const rows = TABLE_ROWS[t.name]
@@ -86,7 +100,7 @@ export function resultOverrides(n: number, summary: Summary): SlideOverrides | u
       },
     }
   }
-  if (n === 22) {
+  if (n === 21) {
     return { replace: (s) => (s.kind === 'chart' ? <StudyTimeChart s={s} /> : undefined) }
   }
   return undefined
