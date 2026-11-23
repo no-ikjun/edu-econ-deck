@@ -39,16 +39,54 @@ function partRate(s: Summary, c: Condition, partId: string) {
   return rate(s.byCondition[c], (r) => r.parts[partId] === 1)
 }
 
+const cellText = (t: TableShape, row: number, col = 0) =>
+  t.rows[row]?.cells[col]?.paras.flatMap((p) => p.runs.map((r) => r.t)).join('').trim() ?? ''
+
 /**
  * Slide 16 row label → answer-key part. "7 (1)" → "7번 (1)", "3" → "3번", so each
  * sub-question of a 2-point item gets its own row and its own rate.
  */
 function partForRow(t: TableShape, row: number) {
-  const label = t.rows[row]?.cells[0]?.paras.flatMap((p) => p.runs.map((r) => r.t)).join('').trim() ?? ''
-  const m = label.match(/^(\d+)\s*(\(\d\))?$/)
+  const m = cellText(t, row).match(/^(\d+)\s*(\(\d\))?$/)
   if (!m) return undefined
   const id = m[2] ? `${m[1]}번 ${m[2]}` : `${m[1]}번`
   return PARTS.find((p) => p.id === id)
+}
+
+/** Slide 19 left table: how many people picked each difficulty (1 매우 쉬움 … 5 매우 어려움). */
+function difficultyCell(t: TableShape, row: number, col: number, s: Summary): ((p: Para) => ReactNode) | undefined {
+  const label = cellText(t, row)
+  const rs = label === '전체' ? CONDITIONS.flatMap((c) => s.byCondition[c]) : s.byCondition[CONDITION_BY_NAME[label]]
+  if (!rs) return undefined
+  const ds = rs.map((r) => r.difficulty).filter((d): d is number => d !== null && d >= 1 && d <= 5)
+  if (!ds.length) return undefined
+  const head = cellText(t, 0, col)
+  if (head === '평균') return (p) => withText(p, (ds.reduce((a, b) => a + b, 0) / ds.length).toFixed(1))
+  const level = Number(head)
+  if (!(level >= 1 && level <= 5)) return undefined
+  return (p) => withText(p, String(ds.filter((d) => d === level).length))
+}
+
+/**
+ * Slide 19 right table: questions paired by what they test. "1번 …" rows show that
+ * question's full-credit rate; "묶음 평균" averages the two rates above it.
+ */
+function groupedCell(t: TableShape, row: number, c: Condition, s: Summary): ((p: Para) => ReactNode) | undefined {
+  const label = cellText(t, row)
+  const q = label.match(/^(\d+)번/)
+  if (q) return (p) => rateRuns(p, s.questionRates[c][Number(q[1])])
+  if (label !== '묶음 평균') return undefined
+  const pcts: number[] = []
+  for (let r = row - 1; r > 0; r--) {
+    const m = cellText(t, r).match(/^(\d+)번/)
+    if (!m) break
+    const v = pct(s.questionRates[c][Number(m[1])])
+    if (v === null) return undefined
+    pcts.push(v)
+  }
+  if (!pcts.length) return undefined
+  const avg = Math.round(pcts.reduce((a, b) => a + b, 0) / pcts.length)
+  return (p) => withText(p, `${avg}%`, { bold: true })
 }
 
 /** Table rows on slides 17–18 → the statistic each row shows. */
@@ -100,13 +138,27 @@ export function resultOverrides(n: number, summary: Summary): SlideOverrides | u
       },
     }
   }
+  if (n === 19) {
+    return {
+      cell: (t, row, col) => {
+        if (row === 0 || col < 1) return undefined
+        const para =
+          t.name === 'Difficulty Table'
+            ? difficultyCell(t, row, col, summary)
+            : t.name === 'Grouped Accuracy Table'
+              ? groupedCell(t, row, CONDITIONS[col - 1], summary)
+              : undefined
+        return para && { para }
+      },
+    }
+  }
   if (n === 21) {
     return { replace: (s) => (s.kind === 'chart' ? <StudyTimeChart s={s} /> : undefined) }
   }
   return undefined
 }
 
-/** Slides 10 and 12: the countdown replaces the PPT's animated digit stacks. */
+/** Slides 10, 12 and 24: the countdown replaces the PPT's animated digit stacks. */
 export function timerOverrides(t: TimerState, now: number): SlideOverrides {
   const left = remainingMs(t, now)
   const done = left === 0

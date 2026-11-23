@@ -9,7 +9,7 @@ import { DataPanel } from './DataPanel'
 
 const deck = deckJson as DeckData
 const COUNT = deck.slides.length
-const RESULT_SLIDES = new Set([15, 16, 17, 18])
+const RESULT_SLIDES = new Set([15, 16, 17, 18, 19])
 
 function slideFromHash() {
   const n = Number(window.location.hash.replace(/^#\/?/, ''))
