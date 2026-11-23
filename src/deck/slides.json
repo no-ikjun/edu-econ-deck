@@ -8182,6 +8182,576 @@
        "indent": 0.0,
        "runs": [
         {
+         "t": "03  결과 · 명예의 전당",
+         "size": 28.0,
+         "bold": true,
+         "color": "#2B59C3"
+        }
+       ]
+      }
+     ],
+     "placeholder": "body"
+    },
+    {
+     "name": "PH 2",
+     "x": 96.0,
+     "y": 116.0,
+     "w": 1728.0,
+     "h": 168.0,
+     "kind": "box",
+     "geom": "rect",
+     "body": {
+      "insets": {
+       "l": 0.0,
+       "t": 0.0,
+       "r": 0.0,
+       "b": 0.0
+      },
+      "anchor": "t",
+      "wrap": "square"
+     },
+     "paras": [
+      {
+       "align": "l",
+       "lineSpacing": {
+        "pct": 1.1
+       },
+       "spaceBefore": {
+        "pct": 0.0
+       },
+       "spaceAfter": null,
+       "marL": 0,
+       "indent": 0,
+       "runs": [
+        {
+         "t": "명예의 전당",
+         "size": 60.0,
+         "bold": true,
+         "color": "#191F28",
+         "spacing": -0.6
+        }
+       ]
+      }
+     ],
+     "placeholder": "title"
+    },
+    {
+     "name": "Rank 2 Card",
+     "x": 192.0,
+     "y": 452.0,
+     "w": 480.0,
+     "h": 208.0,
+     "kind": "box",
+     "geom": "rect",
+     "stroke": {
+      "w": 2.0,
+      "color": "#D1D6DB"
+     },
+     "body": {
+      "insets": {
+       "l": 24.0,
+       "t": 24.0,
+       "r": 24.0,
+       "b": 24.0
+      },
+      "anchor": "ctr",
+      "wrap": "square"
+     },
+     "paras": [
+      {
+       "align": "ctr",
+       "lineSpacing": {
+        "pct": 1.0
+       },
+       "spaceBefore": {
+        "px": 0.0
+       },
+       "spaceAfter": null,
+       "marL": 0.0,
+       "indent": 0.0,
+       "runs": [
+        {
+         "t": "[이름]",
+         "size": 48.0,
+         "bold": true,
+         "color": "#191F28"
+        }
+       ]
+      },
+      {
+       "align": "ctr",
+       "lineSpacing": {
+        "pct": 1.0
+       },
+       "spaceBefore": {
+        "px": 12.0
+       },
+       "spaceAfter": null,
+       "marL": 0.0,
+       "indent": 0.0,
+       "runs": [
+        {
+         "t": "[조건] · [N]점",
+         "size": 32.0,
+         "bold": false,
+         "color": "#4E5968"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Rank 2 Block",
+     "x": 192.0,
+     "y": 684.0,
+     "w": 480.0,
+     "h": 192.0,
+     "kind": "box",
+     "geom": "rect",
+     "fill": "#E5E8EB",
+     "body": {
+      "insets": {
+       "l": 24.0,
+       "t": 24.0,
+       "r": 24.0,
+       "b": 24.0
+      },
+      "anchor": "ctr",
+      "wrap": "square"
+     },
+     "paras": [
+      {
+       "align": "ctr",
+       "lineSpacing": {
+        "pct": 1.0
+       },
+       "spaceBefore": {
+        "px": 0.0
+       },
+       "spaceAfter": null,
+       "marL": 0.0,
+       "indent": 0.0,
+       "runs": [
+        {
+         "t": "2위",
+         "size": 64.0,
+         "bold": true,
+         "color": "#191F28"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Rank 1 Card",
+     "x": 720.0,
+     "y": 364.0,
+     "w": 480.0,
+     "h": 208.0,
+     "kind": "box",
+     "geom": "rect",
+     "stroke": {
+      "w": 2.0,
+      "color": "#2B59C3"
+     },
+     "body": {
+      "insets": {
+       "l": 24.0,
+       "t": 24.0,
+       "r": 24.0,
+       "b": 24.0
+      },
+      "anchor": "ctr",
+      "wrap": "square"
+     },
+     "paras": [
+      {
+       "align": "ctr",
+       "lineSpacing": {
+        "pct": 1.0
+       },
+       "spaceBefore": {
+        "px": 0.0
+       },
+       "spaceAfter": null,
+       "marL": 0.0,
+       "indent": 0.0,
+       "runs": [
+        {
+         "t": "[이름]",
+         "size": 56.0,
+         "bold": true,
+         "color": "#191F28"
+        }
+       ]
+      },
+      {
+       "align": "ctr",
+       "lineSpacing": {
+        "pct": 1.0
+       },
+       "spaceBefore": {
+        "px": 12.0
+       },
+       "spaceAfter": null,
+       "marL": 0.0,
+       "indent": 0.0,
+       "runs": [
+        {
+         "t": "[조건] · [N]점",
+         "size": 32.0,
+         "bold": false,
+         "color": "#4E5968"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Rank 1 Block",
+     "x": 720.0,
+     "y": 596.0,
+     "w": 480.0,
+     "h": 280.0,
+     "kind": "box",
+     "geom": "rect",
+     "fill": "#2B59C3",
+     "body": {
+      "insets": {
+       "l": 24.0,
+       "t": 24.0,
+       "r": 24.0,
+       "b": 24.0
+      },
+      "anchor": "ctr",
+      "wrap": "square"
+     },
+     "paras": [
+      {
+       "align": "ctr",
+       "lineSpacing": {
+        "pct": 1.0
+       },
+       "spaceBefore": {
+        "px": 0.0
+       },
+       "spaceAfter": null,
+       "marL": 0.0,
+       "indent": 0.0,
+       "runs": [
+        {
+         "t": "1위",
+         "size": 80.0,
+         "bold": true,
+         "color": "#FFFFFF"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Rank 3 Card",
+     "x": 1248.0,
+     "y": 508.0,
+     "w": 480.0,
+     "h": 208.0,
+     "kind": "box",
+     "geom": "rect",
+     "stroke": {
+      "w": 2.0,
+      "color": "#D1D6DB"
+     },
+     "body": {
+      "insets": {
+       "l": 24.0,
+       "t": 24.0,
+       "r": 24.0,
+       "b": 24.0
+      },
+      "anchor": "ctr",
+      "wrap": "square"
+     },
+     "paras": [
+      {
+       "align": "ctr",
+       "lineSpacing": {
+        "pct": 1.0
+       },
+       "spaceBefore": {
+        "px": 0.0
+       },
+       "spaceAfter": null,
+       "marL": 0.0,
+       "indent": 0.0,
+       "runs": [
+        {
+         "t": "[이름]",
+         "size": 48.0,
+         "bold": true,
+         "color": "#191F28"
+        }
+       ]
+      },
+      {
+       "align": "ctr",
+       "lineSpacing": {
+        "pct": 1.0
+       },
+       "spaceBefore": {
+        "px": 12.0
+       },
+       "spaceAfter": null,
+       "marL": 0.0,
+       "indent": 0.0,
+       "runs": [
+        {
+         "t": "[조건] · [N]점",
+         "size": 32.0,
+         "bold": false,
+         "color": "#4E5968"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Rank 3 Block",
+     "x": 1248.0,
+     "y": 740.0,
+     "w": 480.0,
+     "h": 136.0,
+     "kind": "box",
+     "geom": "rect",
+     "fill": "#F2F4F6",
+     "body": {
+      "insets": {
+       "l": 24.0,
+       "t": 24.0,
+       "r": 24.0,
+       "b": 24.0
+      },
+      "anchor": "ctr",
+      "wrap": "square"
+     },
+     "paras": [
+      {
+       "align": "ctr",
+       "lineSpacing": {
+        "pct": 1.0
+       },
+       "spaceBefore": {
+        "px": 0.0
+       },
+       "spaceAfter": null,
+       "marL": 0.0,
+       "indent": 0.0,
+       "runs": [
+        {
+         "t": "3위",
+         "size": 64.0,
+         "bold": true,
+         "color": "#191F28"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Footnote",
+     "x": 96.0,
+     "y": 904.0,
+     "w": 1728.0,
+     "h": 44.0,
+     "kind": "box",
+     "geom": "rect",
+     "body": {
+      "insets": {
+       "l": 0.0,
+       "t": 24.0,
+       "r": 24.0,
+       "b": 24.0
+      },
+      "anchor": "t",
+      "wrap": "square"
+     },
+     "paras": [
+      {
+       "align": "l",
+       "lineSpacing": {
+        "pct": 1.0
+       },
+       "spaceBefore": null,
+       "spaceAfter": null,
+       "marL": 0.0,
+       "indent": 0.0,
+       "runs": [
+        {
+         "t": "16점 만점 · 동점 시 답안 제출 시간이 빠른 순",
+         "size": 24.0,
+         "bold": false,
+         "color": "#6B7684"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Graphic 47",
+     "x": 912.0,
+     "y": 260.0,
+     "w": 96.0,
+     "h": 96.0,
+     "kind": "image",
+     "src": "media/image9.svg"
+    },
+    {
+     "name": "Graphic 48",
+     "x": 392.0,
+     "y": 364.0,
+     "w": 80.0,
+     "h": 80.0,
+     "kind": "image",
+     "src": "media/image10.svg"
+    },
+    {
+     "name": "Graphic 49",
+     "x": 1448.0,
+     "y": 420.0,
+     "w": 80.0,
+     "h": 80.0,
+     "kind": "image",
+     "src": "media/image11.svg"
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "bg": "#FFFFFF",
+   "shapes": [
+    {
+     "name": "Footer Rule",
+     "x": 96.0,
+     "y": 996.0,
+     "w": 1728.0,
+     "h": 0.0,
+     "kind": "line",
+     "geom": "line",
+     "stroke": {
+      "w": 1.5,
+      "color": "#E5E8EB"
+     }
+    },
+    {
+     "name": "Footer Label",
+     "x": 96.0,
+     "y": 1012.0,
+     "w": 800.0,
+     "h": 36.0,
+     "kind": "box",
+     "geom": "rect",
+     "body": {
+      "insets": {
+       "l": 0.0,
+       "t": 0.0,
+       "r": 0.0,
+       "b": 0.0
+      },
+      "anchor": "ctr",
+      "wrap": "none"
+     },
+     "paras": [
+      {
+       "align": "l",
+       "lineSpacing": {
+        "pct": 1.0
+       },
+       "spaceBefore": null,
+       "spaceAfter": null,
+       "marL": 0.0,
+       "indent": 0,
+       "runs": [
+        {
+         "t": "교육의 경제학 · 6조",
+         "size": 20.0,
+         "bold": false,
+         "color": "#6B7684"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Page Number",
+     "x": 1624.0,
+     "y": 1012.0,
+     "w": 200.0,
+     "h": 36.0,
+     "kind": "box",
+     "geom": "rect",
+     "body": {
+      "insets": {
+       "l": 0.0,
+       "t": 0.0,
+       "r": 0.0,
+       "b": 0.0
+      },
+      "anchor": "ctr",
+      "wrap": "none"
+     },
+     "paras": [
+      {
+       "align": "r",
+       "lineSpacing": {
+        "pct": 1.0
+       },
+       "spaceBefore": null,
+       "spaceAfter": null,
+       "marL": 0.0,
+       "indent": 0,
+       "runs": [
+        {
+         "t": "15",
+         "size": 20.0,
+         "bold": false,
+         "color": "#6B7684",
+         "field": "slidenum"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "PH 5",
+     "x": 96.0,
+     "y": 68.0,
+     "w": 1728.0,
+     "h": 40.0,
+     "kind": "box",
+     "geom": "rect",
+     "body": {
+      "insets": {
+       "l": 0.0,
+       "t": 0.0,
+       "r": 0.0,
+       "b": 0.0
+      },
+      "anchor": "b",
+      "wrap": "square"
+     },
+     "paras": [
+      {
+       "align": "l",
+       "lineSpacing": {
+        "pct": 1.2
+       },
+       "spaceBefore": {
+        "px": 0.0
+       },
+       "spaceAfter": null,
+       "marL": 0.0,
+       "indent": 0.0,
+       "runs": [
+        {
          "t": "03  결과 · 결과를 보기 전에",
          "size": 28.0,
          "bold": true,
@@ -8395,7 +8965,7 @@
    ]
   },
   {
-   "n": 15,
+   "n": 16,
    "bg": "#FFFFFF",
    "shapes": [
     {
@@ -8480,7 +9050,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "15",
+         "t": "16",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -9356,7 +9926,7 @@
    ]
   },
   {
-   "n": 16,
+   "n": 17,
    "bg": "#FFFFFF",
    "shapes": [
     {
@@ -9441,7 +10011,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "16",
+         "t": "17",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -13226,7 +13796,7 @@
    ]
   },
   {
-   "n": 17,
+   "n": 18,
    "bg": "#FFFFFF",
    "shapes": [
     {
@@ -13311,7 +13881,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "17",
+         "t": "18",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -14185,7 +14755,7 @@
    ]
   },
   {
-   "n": 18,
+   "n": 19,
    "bg": "#FFFFFF",
    "shapes": [
     {
@@ -14270,7 +14840,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "18",
+         "t": "19",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -15240,7 +15810,7 @@
    ]
   },
   {
-   "n": 19,
+   "n": 20,
    "bg": "#FFFFFF",
    "shapes": [
     {
@@ -15325,7 +15895,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "19",
+         "t": "20",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -18490,7 +19060,7 @@
    ]
   },
   {
-   "n": 20,
+   "n": 21,
    "bg": "#FFFFFF",
    "shapes": [
     {
@@ -18575,7 +19145,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "20",
+         "t": "21",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -18996,7 +19566,7 @@
    ]
   },
   {
-   "n": 21,
+   "n": 22,
    "bg": "#FFFFFF",
    "shapes": [
     {
@@ -19081,7 +19651,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "21",
+         "t": "22",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -19388,7 +19958,7 @@
      "w": 552.21,
      "h": 524.0,
      "kind": "image",
-     "src": "media/image9.png",
+     "src": "media/image12.png",
      "crop": {
       "l": 0.0859
      }
@@ -19529,7 +20099,7 @@
    ]
   },
   {
-   "n": 22,
+   "n": 23,
    "bg": "#FFFFFF",
    "shapes": [
     {
@@ -19614,7 +20184,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "22",
+         "t": "23",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -20187,12 +20757,12 @@
      "w": 321.83,
      "h": 180.89,
      "kind": "image",
-     "src": "media/image-10.png"
+     "src": "media/image-13.png"
     }
    ]
   },
   {
-   "n": 23,
+   "n": 24,
    "bg": "#FFFFFF",
    "shapes": [
     {
@@ -20277,7 +20847,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "23",
+         "t": "24",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -20539,7 +21109,7 @@
    ]
   },
   {
-   "n": 24,
+   "n": 25,
    "bg": "#FFFFFF",
    "shapes": [
     {
@@ -20624,7 +21194,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "24",
+         "t": "25",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -22975,7 +23545,7 @@
    ]
   },
   {
-   "n": 25,
+   "n": 26,
    "bg": "#191F28",
    "shapes": [
     {
@@ -23047,7 +23617,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "25",
+         "t": "26",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -23194,7 +23764,7 @@
    ]
   },
   {
-   "n": 26,
+   "n": 27,
    "bg": "#FFFFFF",
    "shapes": [
     {
@@ -23279,7 +23849,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "26",
+         "t": "27",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -23641,7 +24211,7 @@
    ]
   },
   {
-   "n": 27,
+   "n": 28,
    "bg": "#191F28",
    "shapes": [
     {
@@ -23713,7 +24283,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "27",
+         "t": "28",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",

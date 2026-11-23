@@ -19,6 +19,7 @@ NS = {
     'p': 'http://schemas.openxmlformats.org/presentationml/2006/main',
     'r': 'http://schemas.openxmlformats.org/officeDocument/2006/relationships',
     'c': 'http://schemas.openxmlformats.org/drawingml/2006/chart',
+    'asvg': 'http://schemas.microsoft.com/office/drawing/2016/SVG/main',
 }
 EMU_PX = 6350
 DEFAULT_INSETS = {'l': 91440 / EMU_PX, 't': 45720 / EMU_PX, 'r': 91440 / EMU_PX, 'b': 45720 / EMU_PX}
@@ -398,7 +399,10 @@ class Deck:
         elif tag == 'pic':
             out['kind'] = 'image'
             blip = el.find('.//a:blip', NS)
-            out['src'] = self.image(part, blip.get(q('r:embed')))
+            # Office icons are SVG-only: the blip has no raster, just an svgBlip extension.
+            svg = blip.find('.//asvg:svgBlip', NS)
+            rid = svg.get(q('r:embed')) if svg is not None else blip.get(q('r:embed'))
+            out['src'] = self.image(part, rid)
             src = el.find('.//a:srcRect', NS)
             if src is not None:
                 out['crop'] = {k: int(v) / 100000 for k, v in src.attrib.items()}

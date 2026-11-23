@@ -2,7 +2,7 @@ import type { ReactNode } from 'react'
 import { BoxView, RunSpan, type SlideOverrides } from '../deck/Shape'
 import type { Para, Run, TableShape } from '../deck/types'
 import { PARTS } from '../data/answerKey'
-import { CONDITIONS, questionCorrect, rate, type Condition, type Rate, type Summary } from '../data/grade'
+import { CONDITION_LABEL, CONDITIONS, questionCorrect, ranking, rate, type Condition, type Rate, type Summary } from '../data/grade'
 import { DotPlot, StudyTimeChart } from './charts'
 import { digits, remainingMs, type TimerState } from './timer'
 
@@ -27,7 +27,7 @@ function rateRuns(p: Para, r: Rate, light = false): ReactNode {
   )
 }
 
-// Slide 16 legend: 0–20, 20–40, 40–60, 60–80, 80–100%.
+// Slide 17 legend: 0–20, 20–40, 40–60, 60–80, 80–100%.
 const HEAT = ['#EEF3FC', '#C9D7F4', '#94B0E8', '#5C85D6', '#2B59C3']
 function heat(v: number) {
   return HEAT[Math.min(4, Math.floor(v / 20))]
@@ -43,7 +43,7 @@ const cellText = (t: TableShape, row: number, col = 0) =>
   t.rows[row]?.cells[col]?.paras.flatMap((p) => p.runs.map((r) => r.t)).join('').trim() ?? ''
 
 /**
- * Slide 16 row label → answer-key part. "7 (1)" → "7번 (1)", "3" → "3번", so each
+ * Slide 17 row label → answer-key part. "7 (1)" → "7번 (1)", "3" → "3번", so each
  * sub-question of a 2-point item gets its own row and its own rate.
  */
 function partForRow(t: TableShape, row: number) {
@@ -53,7 +53,7 @@ function partForRow(t: TableShape, row: number) {
   return PARTS.find((p) => p.id === id)
 }
 
-/** Slide 19 left table: how many people picked each difficulty (1 매우 쉬움 … 5 매우 어려움). */
+/** Slide 20 left table: how many people picked each difficulty (1 매우 쉬움 … 5 매우 어려움). */
 function difficultyCell(t: TableShape, row: number, col: number, s: Summary): ((p: Para) => ReactNode) | undefined {
   const label = cellText(t, row)
   const rs = label === '전체' ? CONDITIONS.flatMap((c) => s.byCondition[c]) : s.byCondition[CONDITION_BY_NAME[label]]
@@ -68,7 +68,7 @@ function difficultyCell(t: TableShape, row: number, col: number, s: Summary): ((
 }
 
 /**
- * Slide 19 right table: questions paired by what they test. "1번 …" rows show that
+ * Slide 20 right table: questions paired by what they test. "1번 …" rows show that
  * question's full-credit rate; "묶음 평균" averages the two rates above it.
  */
 function groupedCell(t: TableShape, row: number, c: Condition, s: Summary): ((p: Para) => ReactNode) | undefined {
@@ -89,14 +89,28 @@ function groupedCell(t: TableShape, row: number, c: Condition, s: Summary): ((p:
   return (p) => withText(p, `${avg}%`, { bold: true })
 }
 
-/** Table rows on slides 17–18 → the statistic each row shows. */
+/** Table rows on slides 18–19 → the statistic each row shows. */
 const TABLE_ROWS: Record<string, ((s: Summary, c: Condition) => Rate)[]> = {
   'Scholarship Table': [(s, c) => s.questionRates[c][3], (s, c) => partRate(s, c, '7번 (2)')],
   'Age Table': [(s, c) => s.questionRates[c][1], (s, c) => rate(s.byCondition[c], (r) => questionCorrect(r, 8))],
 }
 
 export function resultOverrides(n: number, summary: Summary): SlideOverrides | undefined {
-  if (n === 15) {
+  if (n === 14) {
+    // Hall of fame: "Rank 1 Card" … "Rank 3 Card" hold "[이름]" and "[조건] · [N]점".
+    const top = ranking(CONDITIONS.flatMap((c) => summary.byCondition[c]))
+    return {
+      box: (s) => {
+        const m = s.name.match(/^Rank (\d) Card$/)
+        if (!m) return undefined
+        const r = top[Number(m[1]) - 1]
+        // Before anyone has submitted, show a dash instead of the PPT's placeholders.
+        const lines = r ? [r.name || '이름 없음', `${CONDITION_LABEL[r.condition]} · ${r.score}점`] : ['—', '\u00a0']
+        return { para: (p, i) => withText(p, lines[i] ?? '') }
+      },
+    }
+  }
+  if (n === 16) {
     return {
       replace: (s) => (s.kind === 'chart' ? <DotPlot s={s} byCondition={summary.byCondition} /> : undefined),
       box: (s) => {
@@ -115,7 +129,7 @@ export function resultOverrides(n: number, summary: Summary): SlideOverrides | u
       },
     }
   }
-  if (n === 16) {
+  if (n === 17) {
     return {
       cell: (t, row, col) => {
         if (t.name !== 'Item Accuracy Table' || row === 0 || col < 2) return undefined
@@ -128,7 +142,7 @@ export function resultOverrides(n: number, summary: Summary): SlideOverrides | u
       },
     }
   }
-  if (n === 17 || n === 18) {
+  if (n === 18 || n === 19) {
     return {
       cell: (t, row, col) => {
         const rows = TABLE_ROWS[t.name]
@@ -138,7 +152,7 @@ export function resultOverrides(n: number, summary: Summary): SlideOverrides | u
       },
     }
   }
-  if (n === 19) {
+  if (n === 20) {
     return {
       cell: (t, row, col) => {
         if (row === 0 || col < 1) return undefined
@@ -152,13 +166,13 @@ export function resultOverrides(n: number, summary: Summary): SlideOverrides | u
       },
     }
   }
-  if (n === 21) {
+  if (n === 22) {
     return { replace: (s) => (s.kind === 'chart' ? <StudyTimeChart s={s} /> : undefined) }
   }
   return undefined
 }
 
-/** Slides 10, 12 and 24: the countdown replaces the PPT's animated digit stacks. */
+/** Slides 10, 12 and 25: the countdown replaces the PPT's animated digit stacks. */
 export function timerOverrides(t: TimerState, now: number): SlideOverrides {
   const left = remainingMs(t, now)
   const done = left === 0

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { PARTS } from './answerKey'
-import { CONDITIONS, parseCsv, summarize, type ParseResult, type Response } from './grade'
+import { CONDITION_LABEL, CONDITIONS, parseCsv, summarize, type ParseResult, type Response } from './grade'
 
 export const DEFAULT_SHEET_ID = '1YF-k7SX1jh2KG1TmAgjwruE2-CFvjI4DzKiseO4AwCI'
 const POLL_MS = 5000
@@ -41,7 +41,7 @@ export function sheetCsvUrl(sheetId: string) {
 
 /** Fake responses for rehearsing the result slides before real data arrives. */
 function sampleCsv(): string {
-  const header = ['타임스탬프', '자신이 속한 조는?', ...PARTS.map((p) => p.id), '이번 시험의 난이도는 어땠나요?']
+  const header = ['타임스탬프', '이름을 알려주세요', '자신이 속한 조는?', ...PARTS.map((p) => p.id), '이번 시험의 난이도는 어땠나요?']
   const labels = { ai: 'AI 활용', helper: '학습 도우미에게 질문 가능', self: '독학' }
   const skill = { ai: 0.62, helper: 0.72, self: 0.66 }
   let seed = 7
@@ -55,7 +55,8 @@ function sampleCsv(): string {
         if (p.kind === 'yesno') return right ? p.answer : '예'
         return right ? p.answer : (p.answer as number) + 10
       })
-      rows.push(['2026. 11. 25 오후 3:30:00', labels[c], ...cells, String(1 + Math.floor(rand() * 5))].join(','))
+      const minute = String(10 + Math.floor(rand() * 50)).padStart(2, '0')
+      rows.push([`2026. 11. 25 오후 3:${minute}:00`, `${CONDITION_LABEL[c]} ${i + 1}`, labels[c], ...cells, String(1 + Math.floor(rand() * 5))].join(','))
     }
   }
   return rows.join('\n')
