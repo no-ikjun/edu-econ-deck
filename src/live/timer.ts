@@ -8,7 +8,7 @@ export type TimerState = {
   touched?: boolean
 }
 
-export const TIMER_SLIDES: Record<number, number> = { 10: 13 * 60_000, 12: 7 * 60_000, 25: 5 * 60_000 }
+export const TIMER_SLIDES: Record<number, number> = { 10: 13 * 60_000, 12: 7 * 60_000, 26: 5 * 60_000 }
 
 export function initialTimers(): Record<number, TimerState> {
   return Object.fromEntries(

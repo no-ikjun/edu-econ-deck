@@ -209,13 +209,13 @@ export function resultOverrides(n: number, summary: Summary, build: Build, slide
       },
     }
   }
-  if (n === 22) {
+  if (n === 23) {
     return { replace: (s) => (s.kind === 'chart' ? <StudyTimeChart s={s} /> : undefined) }
   }
   return undefined
 }
 
-/** Slides 10, 12 and 25: the countdown replaces the PPT's animated digit stacks. */
+/** Slides 10, 12 and 26: the countdown replaces the PPT's animated digit stacks. */
 export function timerOverrides(t: TimerState, now: number): SlideOverrides {
   const left = remainingMs(t, now)
   const done = left === 0

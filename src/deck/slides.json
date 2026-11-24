@@ -19061,6 +19061,255 @@
   },
   {
    "n": 21,
+   "bg": "#191F28",
+   "shapes": [
+    {
+     "name": "Footer Label",
+     "x": 96.0,
+     "y": 1012.0,
+     "w": 800.0,
+     "h": 36.0,
+     "kind": "box",
+     "geom": "rect",
+     "body": {
+      "insets": {
+       "l": 0.0,
+       "t": 0.0,
+       "r": 0.0,
+       "b": 0.0
+      },
+      "anchor": "ctr",
+      "wrap": "none"
+     },
+     "paras": [
+      {
+       "align": "l",
+       "lineSpacing": {
+        "pct": 1.0
+       },
+       "spaceBefore": null,
+       "spaceAfter": null,
+       "marL": 0.0,
+       "indent": 0,
+       "runs": [
+        {
+         "t": "교육의 경제학 · 6조",
+         "size": 20.0,
+         "bold": false,
+         "color": "#6B7684"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Page Number",
+     "x": 1624.0,
+     "y": 1012.0,
+     "w": 200.0,
+     "h": 36.0,
+     "kind": "box",
+     "geom": "rect",
+     "body": {
+      "insets": {
+       "l": 0.0,
+       "t": 0.0,
+       "r": 0.0,
+       "b": 0.0
+      },
+      "anchor": "ctr",
+      "wrap": "none"
+     },
+     "paras": [
+      {
+       "align": "r",
+       "lineSpacing": {
+        "pct": 1.0
+       },
+       "spaceBefore": null,
+       "spaceAfter": null,
+       "marL": 0.0,
+       "indent": 0,
+       "runs": [
+        {
+         "t": "21",
+         "size": 20.0,
+         "bold": false,
+         "color": "#6B7684",
+         "field": "slidenum"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "PH 5",
+     "x": 96.0,
+     "y": 352.0,
+     "w": 1728.0,
+     "h": 40.0,
+     "kind": "box",
+     "geom": "rect",
+     "body": {
+      "insets": {
+       "l": 0.0,
+       "t": 0.0,
+       "r": 0.0,
+       "b": 0.0
+      },
+      "anchor": "b",
+      "wrap": "square"
+     },
+     "paras": [
+      {
+       "align": "l",
+       "lineSpacing": {
+        "pct": 1.2
+       },
+       "spaceBefore": {
+        "px": 0.0
+       },
+       "spaceAfter": null,
+       "marL": 0.0,
+       "indent": 0.0,
+       "runs": [
+        {
+         "t": "04  연구",
+         "size": 28.0,
+         "bold": true,
+         "color": "#6F9BFF"
+        }
+       ]
+      }
+     ],
+     "placeholder": "body"
+    },
+    {
+     "name": "PH 2",
+     "x": 96.0,
+     "y": 408.0,
+     "w": 1728.0,
+     "h": 280.0,
+     "kind": "box",
+     "geom": "rect",
+     "body": {
+      "insets": {
+       "l": 0.0,
+       "t": 0.0,
+       "r": 0.0,
+       "b": 0.0
+      },
+      "anchor": "t",
+      "wrap": "square"
+     },
+     "paras": [
+      {
+       "align": "l",
+       "lineSpacing": {
+        "pct": 1.1
+       },
+       "spaceBefore": {
+        "pct": 0.0
+       },
+       "spaceAfter": null,
+       "marL": 0,
+       "indent": 0,
+       "runs": [
+        {
+         "t": "다른 연구에서도",
+         "size": 80.0,
+         "bold": true,
+         "color": "#FFFFFF",
+         "spacing": -0.6
+        }
+       ]
+      },
+      {
+       "align": "l",
+       "lineSpacing": {
+        "pct": 1.1
+       },
+       "spaceBefore": {
+        "pct": 0.0
+       },
+       "spaceAfter": null,
+       "marL": 0,
+       "indent": 0,
+       "runs": [
+        {
+         "t": "같은 결과",
+         "size": 80.0,
+         "bold": true,
+         "color": "#6F9BFF",
+         "spacing": -0.6
+        },
+        {
+         "t": "가 나왔을까?",
+         "size": 80.0,
+         "bold": true,
+         "color": "#FFFFFF",
+         "spacing": -0.6
+        }
+       ]
+      }
+     ],
+     "placeholder": "title"
+    },
+    {
+     "name": "PH 3",
+     "x": 96.0,
+     "y": 712.0,
+     "w": 1728.0,
+     "h": 160.0,
+     "kind": "box",
+     "geom": "rect",
+     "body": {
+      "insets": {
+       "l": 0.0,
+       "t": 0.0,
+       "r": 0.0,
+       "b": 0.0
+      },
+      "anchor": "t",
+      "wrap": "square"
+     },
+     "paras": [
+      {
+       "align": "l",
+       "lineSpacing": {
+        "pct": 1.2
+       },
+       "spaceBefore": {
+        "px": 20.0
+       },
+       "spaceAfter": null,
+       "marL": 0.0,
+       "indent": 0.0,
+       "runs": [
+        {
+         "t": "오늘 실험은 한 번, 짧은 시간의 결과입니다.",
+         "size": 40.0,
+         "bold": false,
+         "color": "#B0B8C1"
+        },
+        {
+         "br": true
+        },
+        {
+         "t": "고등학교 수학, 대학 물리, 에세이 쓰기 연구 세 편과 비교해 봅니다.",
+         "size": 40.0,
+         "bold": false,
+         "color": "#B0B8C1"
+        }
+       ]
+      }
+     ],
+     "placeholder": "body"
+    }
+   ]
+  },
+  {
+   "n": 22,
    "bg": "#FFFFFF",
    "shapes": [
     {
@@ -19145,7 +19394,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "21",
+         "t": "22",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -19566,7 +19815,7 @@
    ]
   },
   {
-   "n": 22,
+   "n": 23,
    "bg": "#FFFFFF",
    "shapes": [
     {
@@ -19651,7 +19900,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "22",
+         "t": "23",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -20099,7 +20348,7 @@
    ]
   },
   {
-   "n": 23,
+   "n": 24,
    "bg": "#FFFFFF",
    "shapes": [
     {
@@ -20184,7 +20433,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "23",
+         "t": "24",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -20762,7 +21011,7 @@
    ]
   },
   {
-   "n": 24,
+   "n": 25,
    "bg": "#FFFFFF",
    "shapes": [
     {
@@ -20847,7 +21096,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "24",
+         "t": "25",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -21109,7 +21358,7 @@
    ]
   },
   {
-   "n": 25,
+   "n": 26,
    "bg": "#FFFFFF",
    "shapes": [
     {
@@ -21194,7 +21443,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "25",
+         "t": "26",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -23545,7 +23794,7 @@
    ]
   },
   {
-   "n": 26,
+   "n": 27,
    "bg": "#191F28",
    "shapes": [
     {
@@ -23617,7 +23866,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "26",
+         "t": "27",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -23764,7 +24013,7 @@
    ]
   },
   {
-   "n": 27,
+   "n": 28,
    "bg": "#FFFFFF",
    "shapes": [
     {
@@ -23849,7 +24098,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "27",
+         "t": "28",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",
@@ -24211,7 +24460,7 @@
    ]
   },
   {
-   "n": 28,
+   "n": 29,
    "bg": "#191F28",
    "shapes": [
     {
@@ -24283,7 +24532,7 @@
        "indent": 0,
        "runs": [
         {
-         "t": "28",
+         "t": "29",
          "size": 20.0,
          "bold": false,
          "color": "#6B7684",

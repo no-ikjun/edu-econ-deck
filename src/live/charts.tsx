@@ -73,7 +73,7 @@ export function DotPlot({ s, byCondition }: { s: ChartShape; byCondition: Record
   )
 }
 
-/** Slide 22 right chart (chart2): study time, horizontal bars, axis max 70. */
+/** Slide 23 right chart (chart2): study time, horizontal bars, axis max 70. */
 export function StudyTimeChart({ s }: { s: ChartShape }) {
   const data = [
     { label: 'AI 튜터', value: 49, color: '#2B59C3' },
