@@ -287,11 +287,18 @@ export type SlideOverrides = {
   replace?: (s: Shape) => ReactNode | undefined
   box?: (s: BoxShape) => BoxOverride | undefined
   cell?: (table: TableShape, row: number, col: number) => CellOverride | undefined
+  /** Wrap a shape's rendering, e.g. in an entrance animation. */
+  wrap?: (s: Shape, node: ReactNode) => ReactNode
 }
 
 export function ShapeView({ s, o }: { s: Shape; o?: SlideOverrides }) {
+  const node = shapeNode(s, o)
+  return <>{o?.wrap && node !== null ? o.wrap(s, node) : node}</>
+}
+
+function shapeNode(s: Shape, o?: SlideOverrides): ReactNode {
   const replaced = o?.replace?.(s)
-  if (replaced !== undefined) return <>{replaced}</>
+  if (replaced !== undefined) return replaced
   switch (s.kind) {
     case 'box':
       return <BoxView s={s} override={o?.box?.(s)} />

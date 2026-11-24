@@ -3,7 +3,7 @@ import deckJson from './deck/slides.json'
 import type { DeckData } from './deck/types'
 import { Slide } from './deck/Slide'
 import { useResults } from './data/useResults'
-import { resultOverrides, timerOverrides } from './live/overrides'
+import { BUILD_STEPS, resultOverrides, timerOverrides, type Build } from './live/overrides'
 import { TIMER_SLIDES, initialTimers, reset, toggle, useNow, type TimerState } from './live/timer'
 import { DataPanel } from './DataPanel'
 
@@ -32,6 +32,7 @@ export default function App() {
   const [panel, setPanel] = useState(false)
   const [dragging, setDragging] = useState(false)
   const [timers, setTimers] = useState<Record<number, TimerState>>(initialTimers)
+  const [build, setBuild] = useState<Build>({ shown: 0, animate: false })
   const jump = useRef('')
   const scale = useStageScale()
   const results = useResults()
@@ -39,11 +40,23 @@ export default function App() {
   const anyRunning = Object.values(timers).some((t) => t.startedAt !== null)
   const now = useNow(anyRunning)
 
-  const go = useCallback((next: number) => {
+  /** `atEnd` shows every build at once, as PowerPoint does when you step back into a slide. */
+  const go = useCallback((next: number, atEnd = false) => {
     const clamped = Math.max(1, Math.min(COUNT, next))
     setN(clamped)
+    setBuild({ shown: atEnd ? (BUILD_STEPS[clamped] ?? 0) : 0, animate: false })
     history.replaceState(null, '', `#/${clamped}`)
   }, [])
+
+  // Next/previous click: play or undo this slide's builds before changing slides.
+  const forward = useCallback(() => {
+    if (build.shown < (BUILD_STEPS[n] ?? 0)) setBuild({ shown: build.shown + 1, animate: true })
+    else go(n + 1)
+  }, [n, build, go])
+  const back = useCallback(() => {
+    if (build.shown > 0) setBuild({ shown: build.shown - 1, animate: false })
+    else go(n - 1, true)
+  }, [n, build, go])
 
   // Like the PPT (onBegin trigger), a timer starts by itself the first time its
   // slide appears. Space pauses, R resets to the full time and waits.
@@ -67,7 +80,10 @@ export default function App() {
   }, [])
 
   useEffect(() => {
-    const onHash = () => setN(slideFromHash())
+    const onHash = () => {
+      setN(slideFromHash())
+      setBuild({ shown: 0, animate: false })
+    }
     window.addEventListener('hashchange', onHash)
     return () => window.removeEventListener('hashchange', onHash)
   }, [])
@@ -91,21 +107,22 @@ export default function App() {
         case 'ArrowRight':
         case 'ArrowDown':
         case 'PageDown':
-          go(n + 1)
+          forward()
           break
         case 'ArrowLeft':
         case 'ArrowUp':
         case 'PageUp':
         case 'Backspace':
-          go(n - 1)
+          back()
           break
         case ' ':
           if (isTimer) setTimers((t) => ({ ...t, [n]: toggle(t[n], Date.now()) }))
-          else go(e.shiftKey ? n - 1 : n + 1)
+          else if (e.shiftKey) back()
+          else forward()
           break
         case 'Enter':
           if (jump.current) go(Number(jump.current))
-          else go(n + 1)
+          else forward()
           jump.current = ''
           break
         case 'Home':
@@ -134,7 +151,7 @@ export default function App() {
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [n, go])
+  }, [n, go, forward, back])
 
   // Drop a CSV anywhere on the page to load it.
   useEffect(() => {
@@ -164,8 +181,8 @@ export default function App() {
 
   const slide = deck.slides[n - 1]
   const overrides = useMemo(
-    () => (n in TIMER_SLIDES ? timerOverrides(timers[n], now) : resultOverrides(n, results.summary)),
-    [n, timers, now, results.summary],
+    () => (n in TIMER_SLIDES ? timerOverrides(timers[n], now) : resultOverrides(n, results.summary, build, slide)),
+    [n, timers, now, results.summary, build, slide],
   )
 
   const onClick = (e: React.MouseEvent) => {
@@ -174,7 +191,8 @@ export default function App() {
       setTimers((t) => ({ ...t, [n]: toggle(t[n], Date.now()) }))
       return
     }
-    go(e.clientX < window.innerWidth / 4 ? n - 1 : n + 1)
+    if (e.clientX < window.innerWidth / 4) back()
+    else forward()
   }
 
   const live = RESULT_SLIDES.has(n)

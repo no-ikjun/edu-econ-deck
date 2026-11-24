@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { BoxView, RunSpan, type SlideOverrides } from '../deck/Shape'
-import type { Para, Run, TableShape } from '../deck/types'
+import type { Para, Run, Shape, SlideData, TableShape } from '../deck/types'
 import { PARTS } from '../data/answerKey'
 import { CONDITION_LABEL, CONDITIONS, questionCorrect, ranking, rate, type Condition, type Rate, type Summary } from '../data/grade'
 import { DotPlot, StudyTimeChart } from './charts'
@@ -95,11 +95,54 @@ const TABLE_ROWS: Record<string, ((s: Summary, c: Condition) => Rate)[]> = {
   'Age Table': [(s, c) => s.questionRates[c][1], (s, c) => rate(s.byCondition[c], (r) => questionCorrect(r, 8))],
 }
 
-export function resultOverrides(n: number, summary: Summary): SlideOverrides | undefined {
+/** Click builds the PPT doesn't have: slide → clicks before the next slide. */
+export const BUILD_STEPS: Record<number, number> = { 14: 3 }
+
+/** How far a slide's builds have gone; `animate` is false when stepping back. */
+export type Build = { shown: number; animate: boolean }
+
+/**
+ * Hall of fame: which podium (1–3) each shape belongs to. Cards and blocks are
+ * named "Rank N …"; a medal belongs to the card it sits above.
+ */
+export function podiumRanks(slide: SlideData) {
+  const cards = slide.shapes.filter((s) => /^Rank \d Card$/.test(s.name))
+  const out = new Map<string, number>()
+  for (const s of slide.shapes) {
+    const m = s.name.match(/^Rank (\d) (Card|Block)$/)
+    if (m) out.set(s.name, Number(m[1]))
+    else if (s.kind === 'image') {
+      const cx = s.x + s.w / 2
+      const card = cards.find((c) => cx >= c.x && cx <= c.x + c.w)
+      if (card) out.set(s.name, Number(card.name.match(/\d/)![0]))
+    }
+  }
+  return out
+}
+
+/** Entrance for one podium: the block rises, then the card, then the medal. */
+function podiumIn(s: Shape, node: ReactNode) {
+  const kind = /Block$/.test(s.name) ? 'rise' : s.kind === 'image' ? 'pop' : 'up'
+  return (
+    <div className={`build build-${kind}`} style={{ left: s.x, top: s.y, width: s.w, height: s.h }}>
+      <div style={{ position: 'absolute', left: -s.x, top: -s.y }}>{node}</div>
+    </div>
+  )
+}
+
+export function resultOverrides(n: number, summary: Summary, build: Build, slide: SlideData): SlideOverrides | undefined {
   if (n === 14) {
     // Hall of fame: "Rank 1 Card" … "Rank 3 Card" hold "[이름]" and "[조건] · [N]점".
+    // Each click reveals one podium, 3rd place first, like an awards announcement.
     const top = ranking(CONDITIONS.flatMap((c) => summary.byCondition[c]))
+    const podium = podiumRanks(slide)
+    const newest = build.animate ? 4 - build.shown : null
     return {
+      replace: (s) => {
+        const rank = podium.get(s.name)
+        return rank !== undefined && build.shown < 4 - rank ? null : undefined
+      },
+      wrap: (s, node) => (newest !== null && podium.get(s.name) === newest ? podiumIn(s, node) : node),
       box: (s) => {
         const m = s.name.match(/^Rank (\d) Card$/)
         if (!m) return undefined
